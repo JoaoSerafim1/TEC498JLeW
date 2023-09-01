@@ -1,0 +1,3 @@
+module interfaceselector (selCH0, selCH1, selCH2, selCH3, selCH4, selCH5, selCH6, selCH7,
+selBT0, selBT1, selBT2, selBT3, itfsel
+);

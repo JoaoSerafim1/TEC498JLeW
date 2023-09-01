@@ -1,0 +1,34 @@
+module sevensegmentsdisplay (
+
+input A, B, C;
+output sega, segb, segc, segd, sege,segf, segg;
+);
+
+wire segaand1, segaand2, segcand1, segeand1, segeand2, segfand1, segfand2, seggand1;
+
+not (NA, A)
+not (NB, B)
+not (NC, C)
+
+and (segaand1, NB, A, C);
+and (segaand2, B, A, NC);
+
+and (segcand1, B, NA, C);
+
+and (segeand1, NB, C);
+and (segeand2, B, A, NC);
+
+
+and (segfand1, NB, C);
+and (segfand2, B, NA, C);
+
+and (seggand1, A, NB, C);
+
+or (segaor, segaand1, segaand2);
+or (segcor, segcand1);
+or (segdor, segaand1, segaand2);
+or (segeor, segeand1, segeand2);
+or (segfor, segfand1, segfand2);
+or (seggor, seggand1);
+
+endmodule

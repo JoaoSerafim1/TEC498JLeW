@@ -1,0 +1,4 @@
+module demux7to14 (A, B, C, D, E, F, G,
+outsel,
+out00, out01, out02, out03, out04, out05, out06,
+out07, out08, out09, out10, out11, out12, out13);

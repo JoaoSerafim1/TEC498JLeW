@@ -1,0 +1,3 @@
+module featureconflictchecker (A, B, C,
+	D, E, F,
+	cftout);

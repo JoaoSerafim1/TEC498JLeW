@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Sep 01 02:19:03 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : switchandbuttoninput
+Top-level Entity Name : mainmodule
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 14 / 240 ( 6 % )
+Total pins : 44 / 80 ( 55 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

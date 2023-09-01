@@ -1,0 +1,4 @@
+module permissionCheck(ATadm0, ATtest0, ATuser0, ATguest0,
+	FT00, FT10, FT20, FT30, FT40, FT50, FT60,
+	ATadm1, ATtest1, ATuser1, ATguest1,
+	FT01, FT11, FT21, FT31, FT41, FT51, FT61, pmOutput0, pmOutput1;

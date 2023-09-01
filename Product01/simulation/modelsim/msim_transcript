@@ -1,0 +1,43 @@
+# Reading pref.tcl
+# do switchandbuttoninput_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/Product01 {E:/Product01/permissionCheck.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:13:00 on Aug 30,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Product01" E:/Product01/permissionCheck.v 
+# -- Compiling module permissionCheck
+# 
+# Top level modules:
+# 	permissionCheck
+# End time: 01:13:01 on Aug 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/Product01 {E:/Product01/mainmodule.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:13:01 on Aug 30,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Product01" E:/Product01/mainmodule.v 
+# -- Compiling module mainmodule
+# 
+# Top level modules:
+# 	mainmodule
+# End time: 01:13:01 on Aug 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/Product01 {E:/Product01/authandfeatures.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:13:02 on Aug 30,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Product01" E:/Product01/authandfeatures.v 
+# -- Compiling module authandfeatures
+# 
+# Top level modules:
+# 	authandfeatures
+# End time: 01:13:02 on Aug 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

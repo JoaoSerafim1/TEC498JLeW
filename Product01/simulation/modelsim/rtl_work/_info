@@ -1,0 +1,84 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Product01/simulation/modelsim
+vauthandfeatures
+!s110 1693368782
+!i10b 1
+!s100 ABZT`@dVDalADHLObnYXN3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I3Il0`N4T?l0MRSLKmQcAG2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1693367318
+8E:/Product01/authandfeatures.v
+FE:/Product01/authandfeatures.v
+!i122 2
+Z3 L0 1 52
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1693368782.000000
+!s107 E:/Product01/authandfeatures.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Product01|E:/Product01/authandfeatures.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+E:/Product01
+Z7 tCvgOpt 0
+vmainmodule
+Z8 !s110 1693368781
+!i10b 1
+!s100 F6I[XdzIhf;<3UTFX=cd10
+R1
+Im62=TaAm9gN`h6=Q=Va8b2
+R2
+R0
+w1693367372
+8E:/Product01/mainmodule.v
+FE:/Product01/mainmodule.v
+!i122 1
+L0 1 83
+R4
+r1
+!s85 0
+31
+!s108 1693368781.000000
+!s107 E:/Product01/mainmodule.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Product01|E:/Product01/mainmodule.v|
+!i113 1
+R5
+R6
+R7
+vpermissionCheck
+R8
+!i10b 1
+!s100 k1WmcKefBJ_8<1caE;7K<1
+R1
+I3cUPRAWzlPZjCQM>QPE8Z0
+R2
+R0
+w1693350686
+8E:/Product01/permissionCheck.v
+FE:/Product01/permissionCheck.v
+!i122 0
+R3
+R4
+r1
+!s85 0
+31
+!s108 1693368780.000000
+!s107 E:/Product01/permissionCheck.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Product01|E:/Product01/permissionCheck.v|
+!i113 1
+R5
+R6
+R7
+npermission@check

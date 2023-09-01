@@ -1,0 +1,56 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/media/aluno/AL-6U-16/JLeW/Product01/simulation/qsim
+vmainmodule
+!s110 1693425399
+!i10b 1
+!s100 8i4VPHF@YbUHj:44eJ^8K2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I15GVDTKeAfL1M:;@T@=ea2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1693425396
+8switchandbuttoninput.vo
+Fswitchandbuttoninput.vo
+!i122 2
+L0 32 895
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1693425399.000000
+!s107 switchandbuttoninput.vo|
+!s90 -work|work|switchandbuttoninput.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vmainmodule_vlg_vec_tst
+!s110 1693425400
+!i10b 1
+!s100 Ge`K<b64<?X;glFSOQlO92
+R1
+I73`5NVG@Xlm<Hi?L_YNHe3
+R2
+R0
+R3
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 3
+L0 30 192
+R4
+r1
+!s85 0
+31
+!s108 1693425400.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

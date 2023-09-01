@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Product01/simulation/qsim
+vmainmodule
+!s110 1693544625
+!i10b 1
+!s100 cI24Fe;oiPHlcT<H=DL=g1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IN1`RTNnF0TeFOHeVRU=c03
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/JLeW/Product01/simulation/qsim
+w1693544624
+8switchandbuttoninput.vo
+Fswitchandbuttoninput.vo
+!i122 28
+L0 32 1080
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1693544625.000000
+!s107 switchandbuttoninput.vo|
+!s90 -work|work|switchandbuttoninput.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vmainmodule_vlg_vec_tst
+!s110 1693544626
+!i10b 1
+!s100 ^XTKZ_H0TZM__ozMnEb7K1
+R0
+I;;@8HVH;Xc4EGFNCgi=jl2
+R1
+R2
+w1693544622
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 29
+L0 30 150
+R3
+r1
+!s85 0
+31
+!s108 1693544626.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R4
+R5

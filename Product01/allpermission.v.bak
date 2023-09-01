@@ -1,0 +1,5 @@
+module allpermission (A, B, C, D, E, F, permout);
+	
+	input A, B, C, D, E, F;
+	
+	output permout;
