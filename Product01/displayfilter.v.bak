@@ -1,0 +1,19 @@
+module displayfilter (A, B, C,
+	D, E, F, priorsel, displaysel);
+	
+	input A, B, C,
+	D, E, F, priorsel;
+	
+	output displaysel;
+	
+	wire NA, NB, NC, Npriorsel, IE01;
+	
+
+not (NA, A);
+not (NB, B);
+not (NC, C);
+not (Npriorsel, priorsel);
+
+and (
+
+or 

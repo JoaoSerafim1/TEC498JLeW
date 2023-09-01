@@ -1,48 +1,43 @@
 |mainmodule
-CH0 => CH0.IN2
-CH1 => CH1.IN2
-CH2 => CH2.IN2
+CH0 => CH0.IN4
+CH1 => CH1.IN4
+CH2 => CH2.IN4
 CH3 => CH3.IN3
-CH4 => CH4.IN2
-CH5 => CH5.IN2
-CH6 => CH6.IN2
+CH4 => CH4.IN4
+CH5 => CH5.IN4
+CH6 => CH6.IN4
 CH7 => CH7.IN3
 BT0 => NBT0.IN3
 BT1 => NBT1.IN3
 BT2 => NBT2.IN3
 BT3 => NBT3.IN3
-LED0 << <GND>
-LED1 << <GND>
-LED2 << <GND>
-LED3 << <GND>
-LED4 << <GND>
-LED5 << <GND>
-LED6 << <GND>
-COL0 << <GND>
-COL1 << <GND>
-COL2 << <GND>
-COL3 << <GND>
-COL4 << <GND>
-COL5 << <GND>
-LIN0 << <GND>
-LIN1 << <GND>
-LIN2 << <GND>
-LIN3 << <GND>
-LIN4 << <GND>
-LIN5 << <GND>
-LIN6 << <GND>
-SGDA << sevensegmentdisplay:ssdisplay_0.sega
-SGDB << sevensegmentdisplay:ssdisplay_0.segb
-SGDC << sevensegmentdisplay:ssdisplay_0.segc
-SGDD << sevensegmentdisplay:ssdisplay_0.segd
-SGDE << sevensegmentdisplay:ssdisplay_0.sege
-SGDF << sevensegmentdisplay:ssdisplay_0.segf
-SGDG << sevensegmentdisplay:ssdisplay_0.segg
-tmp0 << comb.DB_MAX_OUTPUT_PORT_TYPE
-tmp1 << <GND>
-tmp2 << <GND>
-tmp3 << <GND>
-tmp4 << <GND>
+LED0 <= <GND>
+LED1 <= <GND>
+LED2 <= <GND>
+LED3 <= <GND>
+LED4 <= <GND>
+LED5 <= <GND>
+LED6 <= <GND>
+COL0 <= <GND>
+COL1 <= <GND>
+COL2 <= <GND>
+COL3 <= <GND>
+COL4 <= <GND>
+COL5 <= <GND>
+LIN0 <= <GND>
+LIN1 <= <GND>
+LIN2 <= <GND>
+LIN3 <= <GND>
+LIN4 <= <GND>
+LIN5 <= <GND>
+LIN6 <= <GND>
+SGDA <= sevensegmentdisplay:ssdisplay_0.sega
+SGDB <= sevensegmentdisplay:ssdisplay_0.segb
+SGDC <= sevensegmentdisplay:ssdisplay_0.segc
+SGDD <= sevensegmentdisplay:ssdisplay_0.segd
+SGDE <= sevensegmentdisplay:ssdisplay_0.sege
+SGDF <= sevensegmentdisplay:ssdisplay_0.segf
+SGDG <= sevensegmentdisplay:ssdisplay_0.segg
 
 
 |mainmodule|allpermission:allperm_0
@@ -150,6 +145,55 @@ F => seventhCondition.IN5
 entitfsel <= finalOutput.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|mainmodule|featureconflictchecker:ftcftchk_0
+A => adparity.IN0
+B => beparity.IN0
+C => cfparity.IN0
+D => adparity.IN1
+E => beparity.IN1
+F => cfparity.IN1
+cftout <= cftfree.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|unidirbustrans3b:busIE01
+A0 => A0toB0.IN1
+A1 => A1toB1.IN1
+A2 => A2toB2.IN1
+flowvalve => A0toB0.IN2
+flowvalve => A1toB1.IN2
+flowvalve => A2toB2.IN2
+conflictstatus => hasprioritORnoconflict.IN0
+prioritystatus => hasprioritORnoconflict.IN1
+B0 <= A0toB0.DB_MAX_OUTPUT_PORT_TYPE
+B1 <= A1toB1.DB_MAX_OUTPUT_PORT_TYPE
+B2 <= A2toB2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|unidirbustrans3b:busIE02
+A0 => A0toB0.IN1
+A1 => A1toB1.IN1
+A2 => A2toB2.IN1
+flowvalve => A0toB0.IN2
+flowvalve => A1toB1.IN2
+flowvalve => A2toB2.IN2
+conflictstatus => hasprioritORnoconflict.IN0
+prioritystatus => hasprioritORnoconflict.IN1
+B0 <= A0toB0.DB_MAX_OUTPUT_PORT_TYPE
+B1 <= A1toB1.DB_MAX_OUTPUT_PORT_TYPE
+B2 <= A2toB2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|sevendisplayselector:sevensel_0
+A => WideAnd0.IN0
+B => WideAnd0.IN1
+C => WideAnd0.IN2
+D => WideAnd1.IN0
+E => WideAnd1.IN1
+F => WideAnd1.IN2
+priorsel => max0condition.IN1
+displaysel <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |mainmodule|mux6to3:displaymux_0
 A => out00and0.IN0
 B => out01and0.IN0
@@ -170,17 +214,14 @@ out2 <= finalout2.DB_MAX_OUTPUT_PORT_TYPE
 
 |mainmodule|sevensegmentdisplay:ssdisplay_0
 A => and1.IN0
-A => and4.IN0
 A => and0.IN0
 A => and3.IN0
 B => and1.IN1
 B => and3.IN1
 B => and2.IN0
-B => and4.IN1
 C => and0.IN1
 C => and2.IN1
 C => and3.IN2
-C => and4.IN2
 C => and1.IN2
 D => ft2chkand1.IN0
 E => ft2chkand1.IN1

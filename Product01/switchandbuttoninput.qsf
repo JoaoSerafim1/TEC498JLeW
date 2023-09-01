@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EPM240T100C5
 set_global_assignment -name TOP_LEVEL_ENTITY mainmodule
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:34:25  AUGUST 27, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -62,19 +62,22 @@ set_location_assignment PIN_33 -to CH6
 set_location_assignment PIN_35 -to CH7
 set_global_assignment -name VERILOG_FILE mainmodule.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-set_location_assignment PIN_54 -to tmp0
-set_location_assignment PIN_55 -to tmp1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VERILOG_FILE allpermission.v
-set_location_assignment PIN_76 -to tmp2
-set_location_assignment PIN_57 -to tmp3
-set_location_assignment PIN_61 -to tmp4
 set_global_assignment -name VERILOG_FILE mux6to3.v
 set_global_assignment -name VERILOG_FILE mux7to14.v
 set_global_assignment -name VERILOG_FILE sevensegmentdisplay.v
-set_global_assignment -name VERILOG_FILE unidirbustrans6b.v
 set_global_assignment -name VERILOG_FILE entryinterfaceselector.v
 set_global_assignment -name VERILOG_FILE featureconflictchecker.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VERILOG_FILE sevendisplayselector.v
+set_global_assignment -name VERILOG_FILE unidirbustrans3b.v
+set_location_assignment PIN_90 -to SGDA
+set_location_assignment PIN_70 -to SGDB
+set_location_assignment PIN_41 -to SGDC
+set_location_assignment PIN_98 -to SGDD
+set_location_assignment PIN_100 -to SGDE
+set_location_assignment PIN_92 -to SGDF
+set_location_assignment PIN_39 -to SGDG
