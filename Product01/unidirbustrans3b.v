@@ -1,4 +1,4 @@
-module unidirbustrans6b (A0, A1, A2,
+module unidirbustrans3b (A0, A1, A2,
 	flowvalve, conflictstatus, prioritystatus,
 	B0, B1, B2,);
 
