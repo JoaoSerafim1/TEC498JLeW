@@ -1,6 +1,5 @@
 //Modulo do seletor
-module entryinterfaceselector (A, B, C,
-D, E, F,
+module entryinterfaceselector (A, B, C, D, E, F,
 entitfsel);
 
 	input A, B, C, D, E, F;
