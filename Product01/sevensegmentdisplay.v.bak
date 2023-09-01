@@ -30,9 +30,10 @@ and and0 (and0wire, NA, C);
 and and1 (and1wire, A, B, NC);
 and and2 (and2wire, NB, C);
 and and3 (and3wire, NA, B, C);
+and and4 (and4wire, A, NB, C);
 
 //or (segaor);
-or (segbor, and0wire, and1wire, and2wire);
+or (segbor, and0wire, and1wire, and4wire);
 or (segcor, and2wire, and1wire);
 //or (segdor);
 //or (segeor);
