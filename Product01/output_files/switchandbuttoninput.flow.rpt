@@ -1,5 +1,5 @@
 Flow report for switchandbuttoninput
-Fri Sep 01 02:19:50 2023
+Fri Sep 01 02:41:22 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Fri Sep 01 02:19:50 2023       ;
+; Flow Status           ; Successful - Fri Sep 01 02:41:22 2023       ;
 ; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name         ; switchandbuttoninput                        ;
 ; Top-level Entity Name ; mainmodule                                  ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 09/01/2023 02:18:42  ;
+; Start date & time ; 09/01/2023 02:37:54  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; switchandbuttoninput ;
 +-------------------+----------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+-------------------------------+----------------------+-------------+----------------+
 ; Assignment Name                       ; Value                         ; Default Value        ; Entity Name ; Section Id     ;
 +---------------------------------------+-------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 2543261221386.169354552116112 ; --                   ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 2543261221386.169354667414784 ; --                   ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                   ; --                   ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)     ; <None>               ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                            ; --                   ; --          ; --             ;
@@ -88,12 +88,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4700 MB             ; 00:00:27                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 5517 MB             ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4701 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 5520 MB             ; 00:00:02                           ;
 ; Assembler            ; 00:00:02     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:20     ; 1.0                     ; 4675 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4675 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4619 MB             ; 00:00:01                           ;
-; Total                ; 00:00:44     ; --                      ; --                  ; 00:00:34                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4607 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4607 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,6 +110,9 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -118,6 +124,9 @@ quartus_fit --read_settings_files=off --write_settings_files=off Product01 -c sw
 quartus_asm --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
 quartus_sta Product01 -c switchandbuttoninput
 quartus_eda --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Product01 -c switchandbuttoninput --vector_source=E:/JLeW/Product01/Waveform1.vwf --testbench_file=E:/JLeW/Product01/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Product01 -c switchandbuttoninput --vector_source=E:/JLeW/TEC498JLeW/Product01/Waveform1.vwf --testbench_file=E:/JLeW/TEC498JLeW/Product01/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=E:/JLeW/TEC498JLeW/Product01/simulation/qsim/ Product01 -c switchandbuttoninput
 
 
 

@@ -1,5 +1,5 @@
 Fitter report for switchandbuttoninput
-Fri Sep 01 02:19:03 2023
+Fri Sep 01 02:38:13 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Fri Sep 01 02:19:03 2023       ;
+; Fitter Status         ; Successful - Fri Sep 01 02:38:13 2023       ;
 ; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name         ; switchandbuttoninput                        ;
 ; Top-level Entity Name ; mainmodule                                  ;
@@ -136,7 +136,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in E:/JLeW/Product01/output_files/switchandbuttoninput.pin.
+The pin-out file can be found in E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pin.
 
 
 +------------------------------------------------------------------+
@@ -627,20 +627,20 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file E:/JLeW/Product01/output_files/switchandbuttoninput.fit.smsg
+Info (144001): Generated suppressed messages file E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5517 megabytes
-    Info: Processing ended: Fri Sep 01 02:19:04 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 5520 megabytes
+    Info: Processing ended: Fri Sep 01 02:38:14 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in E:/JLeW/Product01/output_files/switchandbuttoninput.fit.smsg.
+The suppressed messages can be found in E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.fit.smsg.
 
 
