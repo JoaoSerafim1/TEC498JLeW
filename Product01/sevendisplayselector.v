@@ -1,6 +1,7 @@
 module sevendisplayselector (A, B, C,
 D, E, F,
-priorsel, displaysel);
+priorsel,
+displaysel);
 	
 	input A, B, C,
 	D, E, F,
