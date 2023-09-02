@@ -1,7 +1,7 @@
 //Modulo principal (entidade de maior nivel); Instancia todos os demais modulos e os liga
 module mainmodule (CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7,
 BT0, BT1, BT2, BT3, LED0, LED1, LED2, LED3, LED4, LED5, LED6,
-COL0, COL1, COL2, COL3, COL4, COL5, LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
+COL0, COL1, COL2, COL3, COL4, LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
 SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entrada e saida (nao inclui fios)
 	
 	//Declara elementos de entrada (chaves HH e botoes)
@@ -9,7 +9,8 @@ SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entra
 	
 	//Declara elementos de saida (LEDS, Display de 7 Segmentos, e saida temporaria de teste)
 	output LED0, LED1, LED2, LED3, LED4, LED5, LED6,
-	COL0, COL1, COL2, COL3, COL4, COL5, LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
+	
+	COL0, COL1, COL2, COL3, COL4, LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
 	SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG;
 	
 	//Declara os fios utilizados para conectar os modulos
@@ -25,20 +26,17 @@ SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entra
 	sevenselwire,
 	mux6to3ToValidator0, mux6to3ToValidator1, mux6to3ToValidator2,
 	displayvalwire,
-	
 	mux6to3ToDisplay0, mux6to3ToDisplay1, mux6to3ToDisplay2,
 	
-	ledselwire0,
-	ledselwire1,
-	
+	ledselwireIE01, ledselwireIE02,
 	ledwireIE01 [6:0],
 	ledwireIE02 [6:0],
-	
 	lattledwireIE01[6:0],
 	lattledwireIE02[6:0],
-	
 	seqledwireIE01[6:0],
-	seqledwireIE02[6:0];
+	seqledwireIE02[6:0],
+	
+	possiblelattoutput;
 
 //Negacao dos botoes
 not (NBT0, BT0);
@@ -114,23 +112,23 @@ unidirbustrans3b gatedbus_IE02 (
 );
 
 sevendisplayselector sevensel_0 (
-		.A (featurebitIE01[0]),
-		.B (featurebitIE01[1]),
-		.C (featurebitIE01[2]),
-		.D (featurebitIE02[0]),
-		.E (featurebitIE02[1]),
-		.F (featurebitIE02[2]),
+		.A (CH6),
+		.B (CH5),
+		.C (CH4),
+		.D (CH2),
+		.E (CH1),
+		.F (CH0),
 		.priorsel (priorselwire),
 		.displaysel (sevenselwire)
 );
 
 mux6to3 dpvalidatormux_0 (
-		.A (CH2),
-		.B (CH1),
-		.C (CH0),
-		.D (CH6),
-		.E (CH5),
-		.F (CH4),
+		.A (featurebitIE02[0]),
+		.B (featurebitIE02[1]),
+		.C (featurebitIE02[2]),
+		.D (featurebitIE01[0]),
+		.E (featurebitIE01[1]),
+		.F (featurebitIE01[2]),
 		.sel (sevenselwire),
 		.out0 (mux6to3ToValidator0),
 		.out1 (mux6to3ToValidator1),
@@ -175,14 +173,14 @@ ledinterfaceselector ledifsel_IE01 (
 		.A (CH7),
 		.B (NBT3),
 		.C (NBT2),
-		.ledsel (ledselwire0)
+		.ledsel (ledselwireIE01)
 );
 
 ledinterfaceselector ledifsel_IE02 (
 		.A (CH3),
 		.B (NBT1),
 		.C (NBT0),
-		.ledsel (ledselwire1)
+		.ledsel (ledselwireIE02)
 );
 
 ledsequencedecoder ledseqdec_IE01(
@@ -219,7 +217,7 @@ mux7to14 mux7to14_IE01(
 		.E (ledwireIE01[4]),
 		.F (ledwireIE01[5]),
 		.G (ledwireIE01[6]),
-		.sel (ledselwire0),
+		.sel (ledselwireIE01),
 		.out00 (lattledwireIE01[0]),
 		.out01 (lattledwireIE01[1]),
 		.out02 (lattledwireIE01[2]),
@@ -244,7 +242,7 @@ mux7to14 mux7to14_IE02(
 		.E (ledwireIE02[4]),
 		.F (ledwireIE02[5]),
 		.G (ledwireIE02[6]),
-		.sel (ledselwire1),
+		.sel (ledselwireIE02),
 		.out00 (lattledwireIE02[0]),
 		.out01 (lattledwireIE02[1]),
 		.out02 (lattledwireIE02[2]),
@@ -261,12 +259,26 @@ mux7to14 mux7to14_IE02(
 		.out13 (seqledwireIE02[6])
 );
 
-or (LED0, lattledwireIE01[0], lattledwireIE02[0]);
-or (LED1, lattledwireIE01[1], lattledwireIE02[1]);
-or (LED2, lattledwireIE01[2], lattledwireIE02[2]);
-or (LED3, lattledwireIE01[3], lattledwireIE02[3]);
-or (LED4, lattledwireIE01[4], lattledwireIE02[4]);
-or (LED5, lattledwireIE01[5], lattledwireIE02[5]);
-or (LED6, lattledwireIE01[6], lattledwireIE02[6]);
+nor (LIN0, lattledwireIE01[0], lattledwireIE02[0]);
+nor (LIN1, lattledwireIE01[1], lattledwireIE02[1]);
+nor (LIN2, lattledwireIE01[2], lattledwireIE02[2]);
+nor (LIN3, lattledwireIE01[3], lattledwireIE02[3]);
+nor (LIN4, lattledwireIE01[4], lattledwireIE02[4]);
+nor (LIN5, lattledwireIE01[5], lattledwireIE02[5]);
+nor (LIN6, lattledwireIE01[6], lattledwireIE02[6]);
+or (possiblelattoutput, permIE01, permIE01);
+assign COL0 = possiblelattoutput;
+assign COL1 = possiblelattoutput;
+assign COL2 = possiblelattoutput;
+assign COL3 = possiblelattoutput;
+assign COL4 = possiblelattoutput;
+
+or (LED0, seqledwireIE01[0], seqledwireIE02[0]);
+or (LED1, seqledwireIE01[1], seqledwireIE02[1]);
+or (LED2, seqledwireIE01[2], seqledwireIE02[2]);
+or (LED3, seqledwireIE01[3], seqledwireIE02[3]);
+or (LED4, seqledwireIE01[4], seqledwireIE02[4]);
+or (LED5, seqledwireIE01[5], seqledwireIE02[5]);
+or (LED6, seqledwireIE01[6], seqledwireIE02[6]);
 
 endmodule
