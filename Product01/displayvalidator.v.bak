@@ -1,0 +1,6 @@
+displayvalidator dpval_0 (
+		.A (mux6to3ToValidator0),
+		.B (mux6to3ToValidator1),
+		.C (mux6to3ToValidator2),
+		.validout (displayvalwire)
+)
