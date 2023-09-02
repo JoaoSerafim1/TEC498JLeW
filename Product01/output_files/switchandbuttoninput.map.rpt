@@ -1,5 +1,5 @@
 Analysis & Synthesis report for switchandbuttoninput
-Sat Sep 02 04:05:13 2023
+Sat Sep 02 19:28:55 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,9 +14,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "mux7to14:mux7to14_IE02"
- 10. Port Connectivity Checks: "mux7to14:mux7to14_IE01"
- 11. Analysis & Synthesis Messages
+  9. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +41,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Sep 02 04:05:13 2023       ;
+; Analysis & Synthesis Status ; Successful - Sat Sep 02 19:28:55 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; switchandbuttoninput                        ;
 ; Top-level Entity Name       ; mainmodule                                  ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 40                                          ;
-; Total pins                  ; 39                                          ;
+; Total logic elements        ; 50                                          ;
+; Total pins                  ; 38                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -167,20 +165,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 40    ;
-;     -- Combinational with no register       ; 40    ;
+; Total logic elements                        ; 50    ;
+;     -- Combinational with no register       ; 50    ;
 ;     -- Register only                        ; 0     ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 27    ;
-;     -- 3 input functions                    ; 8     ;
-;     -- 2 input functions                    ; 5     ;
+;     -- 4 input functions                    ; 30    ;
+;     -- 3 input functions                    ; 19    ;
+;     -- 2 input functions                    ; 1     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 40    ;
+;     -- normal mode                          ; 50    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -188,26 +186,29 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 39    ;
+; I/O pins                                    ; 38    ;
 ; Maximum fan-out node                        ; CH4   ;
-; Maximum fan-out                             ; 10    ;
-; Total fan-out                               ; 149   ;
-; Average fan-out                             ; 1.89  ;
+; Maximum fan-out                             ; 12    ;
+; Total fan-out                               ; 198   ;
+; Average fan-out                             ; 2.25  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
-+----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                           ; Entity Name            ; Library Name ;
-+----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+------------------------+--------------+
-; |mainmodule                            ; 40 (7)      ; 0            ; 0          ; 39   ; 0            ; 40 (7)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule                                   ; mainmodule             ; work         ;
-;    |entryinterfaceselector:eisel_0|    ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|entryinterfaceselector:eisel_0    ; entryinterfaceselector ; work         ;
-;    |ledsequencedecoder:ledseqdec_IE01| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledsequencedecoder:ledseqdec_IE01 ; ledsequencedecoder     ; work         ;
-;    |ledsequencedecoder:ledseqdec_IE02| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledsequencedecoder:ledseqdec_IE02 ; ledsequencedecoder     ; work         ;
-;    |unidirbustrans3b:gatedbus_IE01|    ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE01    ; unidirbustrans3b       ; work         ;
-;    |unidirbustrans3b:gatedbus_IE02|    ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE02    ; unidirbustrans3b       ; work         ;
-+----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                            ; Entity Name            ; Library Name ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
+; |mainmodule                             ; 50 (14)     ; 0            ; 0          ; 38   ; 0            ; 50 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule                                    ; mainmodule             ; work         ;
+;    |allpermission:allperm_IE01|         ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|allpermission:allperm_IE01         ; allpermission          ; work         ;
+;    |entryinterfaceselector:eisel_0|     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|entryinterfaceselector:eisel_0     ; entryinterfaceselector ; work         ;
+;    |ledinterfaceselector:ledifsel_IE01| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledinterfaceselector:ledifsel_IE01 ; ledinterfaceselector   ; work         ;
+;    |ledinterfaceselector:ledifsel_IE02| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledinterfaceselector:ledifsel_IE02 ; ledinterfaceselector   ; work         ;
+;    |mux7to14:mux7to14_IE01|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE01             ; mux7to14               ; work         ;
+;    |mux7to14:mux7to14_IE02|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE02             ; mux7to14               ; work         ;
+;    |unidirbustrans3b:gatedbus_IE01|     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE01     ; unidirbustrans3b       ; work         ;
+;    |unidirbustrans3b:gatedbus_IE02|     ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE02     ; unidirbustrans3b       ; work         ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -226,43 +227,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux7to14:mux7to14_IE02"                                                              ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; out07 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out08 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out09 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out10 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out11 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out12 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out13 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux7to14:mux7to14_IE01"                                                              ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; out07 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out08 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out09 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out10 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out11 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out12 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out13 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 02 04:04:59 2023
+    Info: Processing started: Sat Sep 02 19:28:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -292,60 +263,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file ledinte
 Info (12021): Found 1 design units, including 1 entities, in source file ledsequencedecoder.v
     Info (12023): Found entity 1: ledsequencedecoder File: E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 1
 Info (12127): Elaborating entity "mainmodule" for the top level hierarchy
-Warning (10034): Output port "COL0" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "COL1" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "COL2" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "COL3" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "COL4" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "COL5" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN0" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN1" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN2" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN3" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN4" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN5" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Warning (10034): Output port "LIN6" at mainmodule.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 60
-Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 80
-Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 90
-Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 102
-Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 125
-Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 138
-Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 145
+Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 58
+Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 78
+Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 88
+Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 100
+Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 123
+Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 136
+Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 143
 Warning (10034): Output port "validout" at displayvalidator.v(6) has no driver File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 6
-Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 172
-Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 179
-Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 199
-Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 237
+Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 170
+Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 177
+Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 197
+Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 235
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "COL0" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "COL1" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "COL2" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "COL3" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "COL4" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "COL5" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN0" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN1" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN2" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN3" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN4" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN5" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "LIN6" is stuck at GND File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 12
-    Warning (13410): Pin "SGDA" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-    Warning (13410): Pin "SGDB" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-    Warning (13410): Pin "SGDC" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-    Warning (13410): Pin "SGDD" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-    Warning (13410): Pin "SGDE" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-    Warning (13410): Pin "SGDF" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-    Warning (13410): Pin "SGDG" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 13
-Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "SGDA" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+    Warning (13410): Pin "SGDB" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+    Warning (13410): Pin "SGDC" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+    Warning (13410): Pin "SGDD" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+    Warning (13410): Pin "SGDE" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+    Warning (13410): Pin "SGDF" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+    Warning (13410): Pin "SGDG" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
+Info (21057): Implemented 88 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 40 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 50 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Sat Sep 02 04:05:14 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Sat Sep 02 19:28:56 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
