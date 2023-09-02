@@ -15,9 +15,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus Prime"
-// VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
-// DATE "09/01/2023 17:30:28"
+// DATE "09/02/2023 04:05:29"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -127,42 +127,68 @@ tri1 devoe;
 initial $sdf_annotate("switchandbuttoninput_v.sdo");
 // synopsys translate_on
 
-wire \CH6~combout ;
+wire \CH5~combout ;
 wire \CH4~combout ;
+wire \BT3~combout ;
+wire \CH7~combout ;
+wire \gatedbus_IE01|A0toB0~3_combout ;
+wire \CH6~combout ;
+wire \BT2~combout ;
+wire \gatedbus_IE01|A0toB0~5_combout ;
+wire \gatedbus_IE01|A0toB0~4_combout ;
+wire \gatedbus_IE01|A0toB0~2_combout ;
 wire \CH0~combout ;
+wire \CH3~combout ;
+wire \BT1~combout ;
+wire \eisel_0|finalOutput~0_combout ;
+wire \BT0~combout ;
+wire \eisel_0|finalOutput~1_combout ;
+wire \eisel_0|finalOutput~2_combout ;
 wire \CH2~combout ;
 wire \CH1~combout ;
-wire \ssdisplay_0|ft2chkand1~0_combout ;
-wire \CH5~combout ;
-wire \ssdisplay_0|ft2chkor~combout ;
-wire \BT2~combout ;
-wire \sevensel_0|displaysel~0_combout ;
-wire \BT1~combout ;
-wire \CH3~combout ;
-wire \BT0~combout ;
-wire \sevensel_0|displaysel~1_combout ;
-wire \CH7~combout ;
-wire \BT3~combout ;
-wire \sevensel_0|displaysel~2_combout ;
-wire \displaymux_0|finalout0~0_combout ;
-wire \displaymux_0|finalout2~0_combout ;
-wire \ssdisplay_0|comb~0_combout ;
-wire \displaymux_0|finalout1~0_combout ;
-wire \ssdisplay_0|comb~1_combout ;
-wire \ssdisplay_0|comb~2_combout ;
-wire \ssdisplay_0|comb~3_combout ;
-wire \ssdisplay_0|comb~4_combout ;
-wire \ssdisplay_0|comb~5_combout ;
+wire \gatedbus_IE01|hasprioritORnoconflict~0_combout ;
+wire \gatedbus_IE01|A0toB0~7_combout ;
+wire \gatedbus_IE01|A0toB0~6_combout ;
+wire \gatedbus_IE01|A1toB1~combout ;
+wire \ledseqdec_IE01|led0and~0_combout ;
+wire \ledseqdec_IE01|led0and~1_combout ;
+wire \gatedbus_IE02|A0toB0~3_combout ;
+wire \gatedbus_IE02|A0toB0~5_combout ;
+wire \gatedbus_IE02|A0toB0~7_combout ;
+wire \gatedbus_IE02|A0toB0~4_combout ;
+wire \gatedbus_IE02|A0toB0~2_combout ;
+wire \gatedbus_IE02|A0toB0~6_combout ;
+wire \gatedbus_IE02|A1toB1~combout ;
+wire \ledseqdec_IE02|led0and~0_combout ;
+wire \ledseqdec_IE02|led0and~1_combout ;
+wire \comb~0_combout ;
+wire \gatedbus_IE02|A0toB0~combout ;
+wire \ledseqdec_IE01|led0and~2_combout ;
+wire \gatedbus_IE01|A0toB0~combout ;
+wire \ledseqdec_IE02|led0and~2_combout ;
+wire \comb~1_combout ;
+wire \comb~2_combout ;
+wire \ledseqdec_IE02|led0and~4_combout ;
+wire \ledseqdec_IE01|led0and~3_combout ;
+wire \ledseqdec_IE01|led0and~4_combout ;
+wire \ledseqdec_IE02|led0and~3_combout ;
+wire \comb~3_combout ;
+wire \ledseqdec_IE01|led0and~5_combout ;
+wire \ledseqdec_IE02|led0and~5_combout ;
+wire \comb~4_combout ;
+wire \comb~5_combout ;
+wire \ledseqdec_IE02|led0and~6_combout ;
+wire \comb~6_combout ;
 
 
-// Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH6~I (
+// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH5~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\CH6~combout ),
-	.padio(CH6));
+	.combout(\CH5~combout ),
+	.padio(CH5));
 // synopsys translate_off
-defparam \CH6~I .operation_mode = "input";
+defparam \CH5~I .operation_mode = "input";
 // synopsys translate_on
 
 // Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -175,6 +201,191 @@ maxii_io \CH4~I (
 defparam \CH4~I .operation_mode = "input";
 // synopsys translate_on
 
+// Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \BT3~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\BT3~combout ),
+	.padio(BT3));
+// synopsys translate_off
+defparam \BT3~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH7~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH7~combout ),
+	.padio(CH7));
+// synopsys translate_off
+defparam \CH7~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N5
+maxii_lcell \gatedbus_IE01|A0toB0~3 (
+// Equation(s):
+// \gatedbus_IE01|A0toB0~3_combout  = (\CH7~combout  & ((\CH4~combout  & ((\CH5~combout ) # (\BT3~combout ))) # (!\CH4~combout  & ((!\BT3~combout )))))
+
+	.clk(gnd),
+	.dataa(\CH4~combout ),
+	.datab(\CH5~combout ),
+	.datac(\BT3~combout ),
+	.datad(\CH7~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE01|A0toB0~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE01|A0toB0~3 .lut_mask = "ad00";
+defparam \gatedbus_IE01|A0toB0~3 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0~3 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0~3 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0~3 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH6~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH6~combout ),
+	.padio(CH6));
+// synopsys translate_off
+defparam \CH6~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \BT2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\BT2~combout ),
+	.padio(BT2));
+// synopsys translate_off
+defparam \BT2~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N6
+maxii_lcell \gatedbus_IE01|A0toB0~5 (
+// Equation(s):
+// \gatedbus_IE01|A0toB0~5_combout  = (\BT2~combout  & ((\gatedbus_IE01|A0toB0~3_combout  & ((\CH4~combout ) # (!\CH6~combout ))) # (!\gatedbus_IE01|A0toB0~3_combout  & ((\CH6~combout ) # (!\CH4~combout ))))) # (!\BT2~combout  & 
+// (\gatedbus_IE01|A0toB0~3_combout  $ (((\CH4~combout )))))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE01|A0toB0~3_combout ),
+	.datab(\CH6~combout ),
+	.datac(\CH4~combout ),
+	.datad(\BT2~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE01|A0toB0~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE01|A0toB0~5 .lut_mask = "e75a";
+defparam \gatedbus_IE01|A0toB0~5 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0~5 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0~5 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0~5 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N9
+maxii_lcell \gatedbus_IE01|A0toB0~4 (
+// Equation(s):
+// \gatedbus_IE01|A0toB0~4_combout  = (!\gatedbus_IE01|A0toB0~3_combout  & (!\BT2~combout  & (\CH6~combout  $ (\CH4~combout ))))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE01|A0toB0~3_combout ),
+	.datab(\CH6~combout ),
+	.datac(\CH4~combout ),
+	.datad(\BT2~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE01|A0toB0~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE01|A0toB0~4 .lut_mask = "0014";
+defparam \gatedbus_IE01|A0toB0~4 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0~4 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0~4 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0~4 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N7
+maxii_lcell \gatedbus_IE01|A0toB0~2 (
+// Equation(s):
+// \gatedbus_IE01|A0toB0~2_combout  = (\CH5~combout  & ((\BT3~combout  & ((\CH7~combout ))) # (!\BT3~combout  & (!\CH4~combout )))) # (!\CH5~combout  & (\CH4~combout  & ((\CH7~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH4~combout ),
+	.datab(\CH5~combout ),
+	.datac(\BT3~combout ),
+	.datad(\CH7~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE01|A0toB0~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE01|A0toB0~2 .lut_mask = "e604";
+defparam \gatedbus_IE01|A0toB0~2 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0~2 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0~2 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0~2 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0~2 .synch_mode = "off";
+// synopsys translate_on
+
 // Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 maxii_io \CH0~I (
 	.datain(gnd),
@@ -183,6 +394,145 @@ maxii_io \CH0~I (
 	.padio(CH0));
 // synopsys translate_off
 defparam \CH0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH3~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH3~combout ),
+	.padio(CH3));
+// synopsys translate_off
+defparam \CH3~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_50,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \BT1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\BT1~combout ),
+	.padio(BT1));
+// synopsys translate_off
+defparam \BT1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N8
+maxii_lcell \eisel_0|finalOutput~0 (
+// Equation(s):
+// \eisel_0|finalOutput~0_combout  = (\BT3~combout  & (!\CH7~combout  & (\CH3~combout  $ (!\BT1~combout )))) # (!\BT3~combout  & (\CH3~combout  & (\CH7~combout  $ (\BT1~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH7~combout ),
+	.datab(\CH3~combout ),
+	.datac(\BT3~combout ),
+	.datad(\BT1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\eisel_0|finalOutput~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \eisel_0|finalOutput~0 .lut_mask = "4418";
+defparam \eisel_0|finalOutput~0 .operation_mode = "normal";
+defparam \eisel_0|finalOutput~0 .output_mode = "comb_only";
+defparam \eisel_0|finalOutput~0 .register_cascade_mode = "off";
+defparam \eisel_0|finalOutput~0 .sum_lutc_input = "datac";
+defparam \eisel_0|finalOutput~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_52,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \BT0~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\BT0~combout ),
+	.padio(BT0));
+// synopsys translate_off
+defparam \BT0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N1
+maxii_lcell \eisel_0|finalOutput~1 (
+// Equation(s):
+// \eisel_0|finalOutput~1_combout  = (!\BT3~combout  & (((\CH7~combout ))))
+
+	.clk(gnd),
+	.dataa(\BT3~combout ),
+	.datab(vcc),
+	.datac(\CH7~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\eisel_0|finalOutput~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \eisel_0|finalOutput~1 .lut_mask = "5050";
+defparam \eisel_0|finalOutput~1 .operation_mode = "normal";
+defparam \eisel_0|finalOutput~1 .output_mode = "comb_only";
+defparam \eisel_0|finalOutput~1 .register_cascade_mode = "off";
+defparam \eisel_0|finalOutput~1 .sum_lutc_input = "datac";
+defparam \eisel_0|finalOutput~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y1_N2
+maxii_lcell \eisel_0|finalOutput~2 (
+// Equation(s):
+// \eisel_0|finalOutput~2_combout  = (\BT2~combout  & (((!\eisel_0|finalOutput~0_combout  & !\BT0~combout )) # (!\eisel_0|finalOutput~1_combout ))) # (!\BT2~combout  & ((\eisel_0|finalOutput~1_combout ) # ((\eisel_0|finalOutput~0_combout  & !\BT0~combout 
+// ))))
+
+	.clk(gnd),
+	.dataa(\eisel_0|finalOutput~0_combout ),
+	.datab(\BT2~combout ),
+	.datac(\BT0~combout ),
+	.datad(\eisel_0|finalOutput~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\eisel_0|finalOutput~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \eisel_0|finalOutput~2 .lut_mask = "37ce";
+defparam \eisel_0|finalOutput~2 .operation_mode = "normal";
+defparam \eisel_0|finalOutput~2 .output_mode = "comb_only";
+defparam \eisel_0|finalOutput~2 .register_cascade_mode = "off";
+defparam \eisel_0|finalOutput~2 .sum_lutc_input = "datac";
+defparam \eisel_0|finalOutput~2 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -205,15 +555,15 @@ maxii_io \CH1~I (
 defparam \CH1~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: LC_X5_Y1_N2
-maxii_lcell \ssdisplay_0|ft2chkand1~0 (
+// Location: LC_X5_Y1_N4
+maxii_lcell \gatedbus_IE01|hasprioritORnoconflict~0 (
 // Equation(s):
-// \ssdisplay_0|ft2chkand1~0_combout  = (!\CH0~combout  & (((!\CH2~combout  & \CH1~combout ))))
+// \gatedbus_IE01|hasprioritORnoconflict~0_combout  = (\CH2~combout  & (\CH6~combout  & (\CH5~combout  $ (!\CH1~combout )))) # (!\CH2~combout  & (!\CH6~combout  & (\CH5~combout  $ (!\CH1~combout ))))
 
 	.clk(gnd),
-	.dataa(\CH0~combout ),
-	.datab(vcc),
-	.datac(\CH2~combout ),
+	.dataa(\CH2~combout ),
+	.datab(\CH5~combout ),
+	.datac(\CH6~combout ),
 	.datad(\CH1~combout ),
 	.aclr(gnd),
 	.aload(gnd),
@@ -227,86 +577,30 @@ maxii_lcell \ssdisplay_0|ft2chkand1~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|ft2chkand1~0_combout ),
+	.combout(\gatedbus_IE01|hasprioritORnoconflict~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|ft2chkand1~0 .lut_mask = "0500";
-defparam \ssdisplay_0|ft2chkand1~0 .operation_mode = "normal";
-defparam \ssdisplay_0|ft2chkand1~0 .output_mode = "comb_only";
-defparam \ssdisplay_0|ft2chkand1~0 .register_cascade_mode = "off";
-defparam \ssdisplay_0|ft2chkand1~0 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|ft2chkand1~0 .synch_mode = "off";
+defparam \gatedbus_IE01|hasprioritORnoconflict~0 .lut_mask = "8421";
+defparam \gatedbus_IE01|hasprioritORnoconflict~0 .operation_mode = "normal";
+defparam \gatedbus_IE01|hasprioritORnoconflict~0 .output_mode = "comb_only";
+defparam \gatedbus_IE01|hasprioritORnoconflict~0 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|hasprioritORnoconflict~0 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|hasprioritORnoconflict~0 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH5~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH5~combout ),
-	.padio(CH5));
-// synopsys translate_off
-defparam \CH5~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X3_Y1_N2
-maxii_lcell \ssdisplay_0|ft2chkor (
+// Location: LC_X6_Y1_N5
+maxii_lcell \gatedbus_IE01|A0toB0~7 (
 // Equation(s):
-// \ssdisplay_0|ft2chkor~combout  = (\ssdisplay_0|ft2chkand1~0_combout ) # ((!\CH6~combout  & (!\CH4~combout  & \CH5~combout )))
+// \gatedbus_IE01|A0toB0~7_combout  = (\eisel_0|finalOutput~2_combout  & (\gatedbus_IE01|hasprioritORnoconflict~0_combout  & (\CH0~combout  $ (!\CH4~combout ))))
 
 	.clk(gnd),
-	.dataa(\CH6~combout ),
-	.datab(\CH4~combout ),
-	.datac(\ssdisplay_0|ft2chkand1~0_combout ),
-	.datad(\CH5~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\ssdisplay_0|ft2chkor~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \ssdisplay_0|ft2chkor .lut_mask = "f1f0";
-defparam \ssdisplay_0|ft2chkor .operation_mode = "normal";
-defparam \ssdisplay_0|ft2chkor .output_mode = "comb_only";
-defparam \ssdisplay_0|ft2chkor .register_cascade_mode = "off";
-defparam \ssdisplay_0|ft2chkor .sum_lutc_input = "datac";
-defparam \ssdisplay_0|ft2chkor .synch_mode = "off";
-// synopsys translate_on
-
-// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \BT2~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\BT2~combout ),
-	.padio(BT2));
-// synopsys translate_off
-defparam \BT2~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X3_Y1_N4
-maxii_lcell \sevensel_0|displaysel~0 (
-// Equation(s):
-// \sevensel_0|displaysel~0_combout  = (!\CH6~combout  & (!\BT2~combout  & (!\CH4~combout  & \CH5~combout )))
-
-	.clk(gnd),
-	.dataa(\CH6~combout ),
-	.datab(\BT2~combout ),
+	.dataa(\CH0~combout ),
+	.datab(\eisel_0|finalOutput~2_combout ),
 	.datac(\CH4~combout ),
-	.datad(\CH5~combout ),
+	.datad(\gatedbus_IE01|hasprioritORnoconflict~0_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -319,60 +613,30 @@ maxii_lcell \sevensel_0|displaysel~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\sevensel_0|displaysel~0_combout ),
+	.combout(\gatedbus_IE01|A0toB0~7_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \sevensel_0|displaysel~0 .lut_mask = "0100";
-defparam \sevensel_0|displaysel~0 .operation_mode = "normal";
-defparam \sevensel_0|displaysel~0 .output_mode = "comb_only";
-defparam \sevensel_0|displaysel~0 .register_cascade_mode = "off";
-defparam \sevensel_0|displaysel~0 .sum_lutc_input = "datac";
-defparam \sevensel_0|displaysel~0 .synch_mode = "off";
+defparam \gatedbus_IE01|A0toB0~7 .lut_mask = "8400";
+defparam \gatedbus_IE01|A0toB0~7 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0~7 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0~7 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0~7 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0~7 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_50,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \BT1~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\BT1~combout ),
-	.padio(BT1));
-// synopsys translate_off
-defparam \BT1~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH3~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH3~combout ),
-	.padio(CH3));
-// synopsys translate_off
-defparam \CH3~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_52,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \BT0~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\BT0~combout ),
-	.padio(BT0));
-// synopsys translate_off
-defparam \BT0~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X3_Y1_N7
-maxii_lcell \sevensel_0|displaysel~1 (
+// Location: LC_X5_Y1_N3
+maxii_lcell \gatedbus_IE01|A0toB0~6 (
 // Equation(s):
-// \sevensel_0|displaysel~1_combout  = (((\BT0~combout ) # (!\ssdisplay_0|ft2chkand1~0_combout )) # (!\CH3~combout )) # (!\BT1~combout )
+// \gatedbus_IE01|A0toB0~6_combout  = (!\gatedbus_IE01|A0toB0~7_combout  & ((\gatedbus_IE01|A0toB0~2_combout  & (!\gatedbus_IE01|A0toB0~5_combout )) # (!\gatedbus_IE01|A0toB0~2_combout  & ((\gatedbus_IE01|A0toB0~4_combout )))))
 
 	.clk(gnd),
-	.dataa(\BT1~combout ),
-	.datab(\CH3~combout ),
-	.datac(\ssdisplay_0|ft2chkand1~0_combout ),
-	.datad(\BT0~combout ),
+	.dataa(\gatedbus_IE01|A0toB0~5_combout ),
+	.datab(\gatedbus_IE01|A0toB0~4_combout ),
+	.datac(\gatedbus_IE01|A0toB0~2_combout ),
+	.datad(\gatedbus_IE01|A0toB0~7_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -385,86 +649,30 @@ maxii_lcell \sevensel_0|displaysel~1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\sevensel_0|displaysel~1_combout ),
+	.combout(\gatedbus_IE01|A0toB0~6_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \sevensel_0|displaysel~1 .lut_mask = "ff7f";
-defparam \sevensel_0|displaysel~1 .operation_mode = "normal";
-defparam \sevensel_0|displaysel~1 .output_mode = "comb_only";
-defparam \sevensel_0|displaysel~1 .register_cascade_mode = "off";
-defparam \sevensel_0|displaysel~1 .sum_lutc_input = "datac";
-defparam \sevensel_0|displaysel~1 .synch_mode = "off";
+defparam \gatedbus_IE01|A0toB0~6 .lut_mask = "005c";
+defparam \gatedbus_IE01|A0toB0~6 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0~6 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0~6 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0~6 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0~6 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH7~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH7~combout ),
-	.padio(CH7));
-// synopsys translate_off
-defparam \CH7~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \BT3~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\BT3~combout ),
-	.padio(BT3));
-// synopsys translate_off
-defparam \BT3~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X3_Y1_N5
-maxii_lcell \sevensel_0|displaysel~2 (
+// Location: LC_X5_Y2_N1
+maxii_lcell \gatedbus_IE01|A1toB1 (
 // Equation(s):
-// \sevensel_0|displaysel~2_combout  = (\sevensel_0|displaysel~0_combout  & ((\CH7~combout  & ((\BT3~combout ))) # (!\CH7~combout  & (\sevensel_0|displaysel~1_combout  & !\BT3~combout ))))
+// \gatedbus_IE01|A1toB1~combout  = (\CH5~combout  & (((\gatedbus_IE01|A0toB0~6_combout ))))
 
 	.clk(gnd),
-	.dataa(\sevensel_0|displaysel~0_combout ),
-	.datab(\sevensel_0|displaysel~1_combout ),
-	.datac(\CH7~combout ),
-	.datad(\BT3~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\sevensel_0|displaysel~2_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \sevensel_0|displaysel~2 .lut_mask = "a008";
-defparam \sevensel_0|displaysel~2 .operation_mode = "normal";
-defparam \sevensel_0|displaysel~2 .output_mode = "comb_only";
-defparam \sevensel_0|displaysel~2 .register_cascade_mode = "off";
-defparam \sevensel_0|displaysel~2 .sum_lutc_input = "datac";
-defparam \sevensel_0|displaysel~2 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y1_N6
-maxii_lcell \displaymux_0|finalout0~0 (
-// Equation(s):
-// \displaymux_0|finalout0~0_combout  = (\sevensel_0|displaysel~2_combout  & (((\CH3~combout )))) # (!\sevensel_0|displaysel~2_combout  & (((\CH7~combout ))))
-
-	.clk(gnd),
-	.dataa(\sevensel_0|displaysel~2_combout ),
+	.dataa(\CH5~combout ),
 	.datab(vcc),
-	.datac(\CH7~combout ),
-	.datad(\CH3~combout ),
+	.datac(\gatedbus_IE01|A0toB0~6_combout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -477,30 +685,30 @@ maxii_lcell \displaymux_0|finalout0~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\displaymux_0|finalout0~0_combout ),
+	.combout(\gatedbus_IE01|A1toB1~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \displaymux_0|finalout0~0 .lut_mask = "fa50";
-defparam \displaymux_0|finalout0~0 .operation_mode = "normal";
-defparam \displaymux_0|finalout0~0 .output_mode = "comb_only";
-defparam \displaymux_0|finalout0~0 .register_cascade_mode = "off";
-defparam \displaymux_0|finalout0~0 .sum_lutc_input = "datac";
-defparam \displaymux_0|finalout0~0 .synch_mode = "off";
+defparam \gatedbus_IE01|A1toB1 .lut_mask = "a0a0";
+defparam \gatedbus_IE01|A1toB1 .operation_mode = "normal";
+defparam \gatedbus_IE01|A1toB1 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A1toB1 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A1toB1 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A1toB1 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y1_N0
-maxii_lcell \displaymux_0|finalout2~0 (
+// Location: LC_X5_Y1_N0
+maxii_lcell \ledseqdec_IE01|led0and~0 (
 // Equation(s):
-// \displaymux_0|finalout2~0_combout  = ((\BT2~combout ) # ((\sevensel_0|displaysel~2_combout  & \BT0~combout )))
+// \ledseqdec_IE01|led0and~0_combout  = (!\BT2~combout  & (\BT3~combout  $ ((!\CH7~combout ))))
 
 	.clk(gnd),
-	.dataa(vcc),
+	.dataa(\BT3~combout ),
 	.datab(\BT2~combout ),
-	.datac(\sevensel_0|displaysel~2_combout ),
-	.datad(\BT0~combout ),
+	.datac(\CH7~combout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -513,30 +721,30 @@ maxii_lcell \displaymux_0|finalout2~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\displaymux_0|finalout2~0_combout ),
+	.combout(\ledseqdec_IE01|led0and~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \displaymux_0|finalout2~0 .lut_mask = "fccc";
-defparam \displaymux_0|finalout2~0 .operation_mode = "normal";
-defparam \displaymux_0|finalout2~0 .output_mode = "comb_only";
-defparam \displaymux_0|finalout2~0 .register_cascade_mode = "off";
-defparam \displaymux_0|finalout2~0 .sum_lutc_input = "datac";
-defparam \displaymux_0|finalout2~0 .synch_mode = "off";
+defparam \ledseqdec_IE01|led0and~0 .lut_mask = "2121";
+defparam \ledseqdec_IE01|led0and~0 .operation_mode = "normal";
+defparam \ledseqdec_IE01|led0and~0 .output_mode = "comb_only";
+defparam \ledseqdec_IE01|led0and~0 .register_cascade_mode = "off";
+defparam \ledseqdec_IE01|led0and~0 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE01|led0and~0 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y2_N6
-maxii_lcell \ssdisplay_0|comb~0 (
+// Location: LC_X5_Y2_N8
+maxii_lcell \ledseqdec_IE01|led0and~1 (
 // Equation(s):
-// \ssdisplay_0|comb~0_combout  = (\ssdisplay_0|ft2chkor~combout  & (((!\displaymux_0|finalout0~0_combout  & !\displaymux_0|finalout2~0_combout ))))
+// \ledseqdec_IE01|led0and~1_combout  = (\gatedbus_IE01|A0toB0~6_combout  & (\CH4~combout  & (!\CH6~combout  & \ledseqdec_IE01|led0and~0_combout )))
 
 	.clk(gnd),
-	.dataa(\ssdisplay_0|ft2chkor~combout ),
-	.datab(vcc),
-	.datac(\displaymux_0|finalout0~0_combout ),
-	.datad(\displaymux_0|finalout2~0_combout ),
+	.dataa(\gatedbus_IE01|A0toB0~6_combout ),
+	.datab(\CH4~combout ),
+	.datac(\CH6~combout ),
+	.datad(\ledseqdec_IE01|led0and~0_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -549,29 +757,29 @@ maxii_lcell \ssdisplay_0|comb~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|comb~0_combout ),
+	.combout(\ledseqdec_IE01|led0and~1_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|comb~0 .lut_mask = "000a";
-defparam \ssdisplay_0|comb~0 .operation_mode = "normal";
-defparam \ssdisplay_0|comb~0 .output_mode = "comb_only";
-defparam \ssdisplay_0|comb~0 .register_cascade_mode = "off";
-defparam \ssdisplay_0|comb~0 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|comb~0 .synch_mode = "off";
+defparam \ledseqdec_IE01|led0and~1 .lut_mask = "0800";
+defparam \ledseqdec_IE01|led0and~1 .operation_mode = "normal";
+defparam \ledseqdec_IE01|led0and~1 .output_mode = "comb_only";
+defparam \ledseqdec_IE01|led0and~1 .register_cascade_mode = "off";
+defparam \ledseqdec_IE01|led0and~1 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE01|led0and~1 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y1_N3
-maxii_lcell \displaymux_0|finalout1~0 (
+// Location: LC_X6_Y1_N9
+maxii_lcell \gatedbus_IE02|A0toB0~3 (
 // Equation(s):
-// \displaymux_0|finalout1~0_combout  = ((\sevensel_0|displaysel~2_combout  & ((\BT1~combout ))) # (!\sevensel_0|displaysel~2_combout  & (\BT3~combout )))
+// \gatedbus_IE02|A0toB0~3_combout  = (\CH3~combout  & ((\CH0~combout  & ((\CH1~combout ) # (\BT1~combout ))) # (!\CH0~combout  & ((!\BT1~combout )))))
 
 	.clk(gnd),
-	.dataa(vcc),
-	.datab(\BT3~combout ),
-	.datac(\sevensel_0|displaysel~2_combout ),
+	.dataa(\CH0~combout ),
+	.datab(\CH3~combout ),
+	.datac(\CH1~combout ),
 	.datad(\BT1~combout ),
 	.aclr(gnd),
 	.aload(gnd),
@@ -585,30 +793,31 @@ maxii_lcell \displaymux_0|finalout1~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\displaymux_0|finalout1~0_combout ),
+	.combout(\gatedbus_IE02|A0toB0~3_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \displaymux_0|finalout1~0 .lut_mask = "fc0c";
-defparam \displaymux_0|finalout1~0 .operation_mode = "normal";
-defparam \displaymux_0|finalout1~0 .output_mode = "comb_only";
-defparam \displaymux_0|finalout1~0 .register_cascade_mode = "off";
-defparam \displaymux_0|finalout1~0 .sum_lutc_input = "datac";
-defparam \displaymux_0|finalout1~0 .synch_mode = "off";
+defparam \gatedbus_IE02|A0toB0~3 .lut_mask = "88c4";
+defparam \gatedbus_IE02|A0toB0~3 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0~3 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0~3 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0~3 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0~3 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y2_N1
-maxii_lcell \ssdisplay_0|comb~1 (
+// Location: LC_X6_Y1_N6
+maxii_lcell \gatedbus_IE02|A0toB0~5 (
 // Equation(s):
-// \ssdisplay_0|comb~1_combout  = (\ssdisplay_0|ft2chkor~combout  & (\displaymux_0|finalout2~0_combout  $ (((\displaymux_0|finalout1~0_combout ) # (!\displaymux_0|finalout0~0_combout )))))
+// \gatedbus_IE02|A0toB0~5_combout  = (\BT0~combout  & ((\CH2~combout  & ((\CH0~combout ) # (!\gatedbus_IE02|A0toB0~3_combout ))) # (!\CH2~combout  & ((\gatedbus_IE02|A0toB0~3_combout ) # (!\CH0~combout ))))) # (!\BT0~combout  & 
+// ((\gatedbus_IE02|A0toB0~3_combout  $ (\CH0~combout ))))
 
 	.clk(gnd),
-	.dataa(\ssdisplay_0|ft2chkor~combout ),
-	.datab(\displaymux_0|finalout1~0_combout ),
-	.datac(\displaymux_0|finalout0~0_combout ),
-	.datad(\displaymux_0|finalout2~0_combout ),
+	.dataa(\CH2~combout ),
+	.datab(\gatedbus_IE02|A0toB0~3_combout ),
+	.datac(\BT0~combout ),
+	.datad(\CH0~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -621,31 +830,30 @@ maxii_lcell \ssdisplay_0|comb~1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|comb~1_combout ),
+	.combout(\gatedbus_IE02|A0toB0~5_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|comb~1 .lut_mask = "208a";
-defparam \ssdisplay_0|comb~1 .operation_mode = "normal";
-defparam \ssdisplay_0|comb~1 .output_mode = "comb_only";
-defparam \ssdisplay_0|comb~1 .register_cascade_mode = "off";
-defparam \ssdisplay_0|comb~1 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|comb~1 .synch_mode = "off";
+defparam \gatedbus_IE02|A0toB0~5 .lut_mask = "e37c";
+defparam \gatedbus_IE02|A0toB0~5 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0~5 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0~5 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0~5 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0~5 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y1_N1
-maxii_lcell \ssdisplay_0|comb~2 (
+// Location: LC_X6_Y1_N7
+maxii_lcell \gatedbus_IE02|A0toB0~7 (
 // Equation(s):
-// \ssdisplay_0|comb~2_combout  = (\ssdisplay_0|ft2chkor~combout  & ((\displaymux_0|finalout1~0_combout  & ((!\displaymux_0|finalout2~0_combout ))) # (!\displaymux_0|finalout1~0_combout  & (\displaymux_0|finalout0~0_combout  & 
-// \displaymux_0|finalout2~0_combout ))))
+// \gatedbus_IE02|A0toB0~7_combout  = (!\eisel_0|finalOutput~2_combout  & (\gatedbus_IE01|hasprioritORnoconflict~0_combout  & (\CH0~combout  $ (!\CH4~combout ))))
 
 	.clk(gnd),
-	.dataa(\displaymux_0|finalout1~0_combout ),
-	.datab(\ssdisplay_0|ft2chkor~combout ),
-	.datac(\displaymux_0|finalout0~0_combout ),
-	.datad(\displaymux_0|finalout2~0_combout ),
+	.dataa(\CH0~combout ),
+	.datab(\eisel_0|finalOutput~2_combout ),
+	.datac(\CH4~combout ),
+	.datad(\gatedbus_IE01|hasprioritORnoconflict~0_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -658,30 +866,30 @@ maxii_lcell \ssdisplay_0|comb~2 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|comb~2_combout ),
+	.combout(\gatedbus_IE02|A0toB0~7_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|comb~2 .lut_mask = "4088";
-defparam \ssdisplay_0|comb~2 .operation_mode = "normal";
-defparam \ssdisplay_0|comb~2 .output_mode = "comb_only";
-defparam \ssdisplay_0|comb~2 .register_cascade_mode = "off";
-defparam \ssdisplay_0|comb~2 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|comb~2 .synch_mode = "off";
+defparam \gatedbus_IE02|A0toB0~7 .lut_mask = "2100";
+defparam \gatedbus_IE02|A0toB0~7 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0~7 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0~7 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0~7 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0~7 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y2_N4
-maxii_lcell \ssdisplay_0|comb~3 (
+// Location: LC_X6_Y1_N4
+maxii_lcell \gatedbus_IE02|A0toB0~4 (
 // Equation(s):
-// \ssdisplay_0|comb~3_combout  = (\ssdisplay_0|ft2chkor~combout  & (!\displaymux_0|finalout1~0_combout  & (!\displaymux_0|finalout0~0_combout  & !\displaymux_0|finalout2~0_combout )))
+// \gatedbus_IE02|A0toB0~4_combout  = (!\gatedbus_IE02|A0toB0~3_combout  & (!\BT0~combout  & (\CH2~combout  $ (\CH0~combout ))))
 
 	.clk(gnd),
-	.dataa(\ssdisplay_0|ft2chkor~combout ),
-	.datab(\displaymux_0|finalout1~0_combout ),
-	.datac(\displaymux_0|finalout0~0_combout ),
-	.datad(\displaymux_0|finalout2~0_combout ),
+	.dataa(\CH2~combout ),
+	.datab(\gatedbus_IE02|A0toB0~3_combout ),
+	.datac(\BT0~combout ),
+	.datad(\CH0~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -694,30 +902,30 @@ maxii_lcell \ssdisplay_0|comb~3 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|comb~3_combout ),
+	.combout(\gatedbus_IE02|A0toB0~4_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|comb~3 .lut_mask = "0002";
-defparam \ssdisplay_0|comb~3 .operation_mode = "normal";
-defparam \ssdisplay_0|comb~3 .output_mode = "comb_only";
-defparam \ssdisplay_0|comb~3 .register_cascade_mode = "off";
-defparam \ssdisplay_0|comb~3 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|comb~3 .synch_mode = "off";
+defparam \gatedbus_IE02|A0toB0~4 .lut_mask = "0102";
+defparam \gatedbus_IE02|A0toB0~4 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0~4 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0~4 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0~4 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0~4 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y2_N5
-maxii_lcell \ssdisplay_0|comb~4 (
+// Location: LC_X6_Y1_N3
+maxii_lcell \gatedbus_IE02|A0toB0~2 (
 // Equation(s):
-// \ssdisplay_0|comb~4_combout  = (\ssdisplay_0|ft2chkor~combout  & (!\displaymux_0|finalout1~0_combout  & (\displaymux_0|finalout0~0_combout  & \displaymux_0|finalout2~0_combout )))
+// \gatedbus_IE02|A0toB0~2_combout  = (\CH1~combout  & ((\BT1~combout  & ((\CH3~combout ))) # (!\BT1~combout  & (!\CH0~combout )))) # (!\CH1~combout  & (\CH0~combout  & (\CH3~combout )))
 
 	.clk(gnd),
-	.dataa(\ssdisplay_0|ft2chkor~combout ),
-	.datab(\displaymux_0|finalout1~0_combout ),
-	.datac(\displaymux_0|finalout0~0_combout ),
-	.datad(\displaymux_0|finalout2~0_combout ),
+	.dataa(\CH0~combout ),
+	.datab(\CH3~combout ),
+	.datac(\CH1~combout ),
+	.datad(\BT1~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -730,31 +938,30 @@ maxii_lcell \ssdisplay_0|comb~4 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|comb~4_combout ),
+	.combout(\gatedbus_IE02|A0toB0~2_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|comb~4 .lut_mask = "2000";
-defparam \ssdisplay_0|comb~4 .operation_mode = "normal";
-defparam \ssdisplay_0|comb~4 .output_mode = "comb_only";
-defparam \ssdisplay_0|comb~4 .register_cascade_mode = "off";
-defparam \ssdisplay_0|comb~4 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|comb~4 .synch_mode = "off";
+defparam \gatedbus_IE02|A0toB0~2 .lut_mask = "c858";
+defparam \gatedbus_IE02|A0toB0~2 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0~2 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0~2 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0~2 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0~2 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y1_N8
-maxii_lcell \ssdisplay_0|comb~5 (
+// Location: LC_X6_Y1_N8
+maxii_lcell \gatedbus_IE02|A0toB0~6 (
 // Equation(s):
-// \ssdisplay_0|comb~5_combout  = (\ssdisplay_0|ft2chkor~combout  & ((\displaymux_0|finalout0~0_combout  & (!\displaymux_0|finalout1~0_combout  & \displaymux_0|finalout2~0_combout )) # (!\displaymux_0|finalout0~0_combout  & 
-// ((!\displaymux_0|finalout2~0_combout )))))
+// \gatedbus_IE02|A0toB0~6_combout  = (!\gatedbus_IE02|A0toB0~7_combout  & ((\gatedbus_IE02|A0toB0~2_combout  & (!\gatedbus_IE02|A0toB0~5_combout )) # (!\gatedbus_IE02|A0toB0~2_combout  & ((\gatedbus_IE02|A0toB0~4_combout )))))
 
 	.clk(gnd),
-	.dataa(\displaymux_0|finalout1~0_combout ),
-	.datab(\ssdisplay_0|ft2chkor~combout ),
-	.datac(\displaymux_0|finalout0~0_combout ),
-	.datad(\displaymux_0|finalout2~0_combout ),
+	.dataa(\gatedbus_IE02|A0toB0~5_combout ),
+	.datab(\gatedbus_IE02|A0toB0~7_combout ),
+	.datac(\gatedbus_IE02|A0toB0~4_combout ),
+	.datad(\gatedbus_IE02|A0toB0~2_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -767,23 +974,785 @@ maxii_lcell \ssdisplay_0|comb~5 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\ssdisplay_0|comb~5_combout ),
+	.combout(\gatedbus_IE02|A0toB0~6_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \ssdisplay_0|comb~5 .lut_mask = "400c";
-defparam \ssdisplay_0|comb~5 .operation_mode = "normal";
-defparam \ssdisplay_0|comb~5 .output_mode = "comb_only";
-defparam \ssdisplay_0|comb~5 .register_cascade_mode = "off";
-defparam \ssdisplay_0|comb~5 .sum_lutc_input = "datac";
-defparam \ssdisplay_0|comb~5 .synch_mode = "off";
+defparam \gatedbus_IE02|A0toB0~6 .lut_mask = "1130";
+defparam \gatedbus_IE02|A0toB0~6 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0~6 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0~6 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0~6 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0~6 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_58,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: LC_X6_Y2_N4
+maxii_lcell \gatedbus_IE02|A1toB1 (
+// Equation(s):
+// \gatedbus_IE02|A1toB1~combout  = (((\CH1~combout  & \gatedbus_IE02|A0toB0~6_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\CH1~combout ),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE02|A1toB1~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE02|A1toB1 .lut_mask = "f000";
+defparam \gatedbus_IE02|A1toB1 .operation_mode = "normal";
+defparam \gatedbus_IE02|A1toB1 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A1toB1 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A1toB1 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A1toB1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y1_N2
+maxii_lcell \ledseqdec_IE02|led0and~0 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~0_combout  = ((!\BT0~combout  & (\CH3~combout  $ (!\BT1~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH3~combout ),
+	.datac(\BT0~combout ),
+	.datad(\BT1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~0 .lut_mask = "0c03";
+defparam \ledseqdec_IE02|led0and~0 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~0 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~0 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~0 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N9
+maxii_lcell \ledseqdec_IE02|led0and~1 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~1_combout  = (!\CH2~combout  & (\CH0~combout  & (\ledseqdec_IE02|led0and~0_combout  & \gatedbus_IE02|A0toB0~6_combout )))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(\CH0~combout ),
+	.datac(\ledseqdec_IE02|led0and~0_combout ),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~1 .lut_mask = "4000";
+defparam \ledseqdec_IE02|led0and~1 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~1 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~1 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~1 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N4
+maxii_lcell \comb~0 (
+// Equation(s):
+// \comb~0_combout  = (\gatedbus_IE01|A1toB1~combout  & (((!\gatedbus_IE02|A1toB1~combout  & \ledseqdec_IE02|led0and~1_combout )))) # (!\gatedbus_IE01|A1toB1~combout  & ((\ledseqdec_IE01|led0and~1_combout ) # ((!\gatedbus_IE02|A1toB1~combout  & 
+// \ledseqdec_IE02|led0and~1_combout ))))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE01|A1toB1~combout ),
+	.datab(\ledseqdec_IE01|led0and~1_combout ),
+	.datac(\gatedbus_IE02|A1toB1~combout ),
+	.datad(\ledseqdec_IE02|led0and~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~0 .lut_mask = "4f44";
+defparam \comb~0 .operation_mode = "normal";
+defparam \comb~0 .output_mode = "comb_only";
+defparam \comb~0 .register_cascade_mode = "off";
+defparam \comb~0 .sum_lutc_input = "datac";
+defparam \comb~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N0
+maxii_lcell \gatedbus_IE02|A0toB0 (
+// Equation(s):
+// \gatedbus_IE02|A0toB0~combout  = (\CH2~combout  & (((\gatedbus_IE02|A0toB0~6_combout ))))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE02|A0toB0~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE02|A0toB0 .lut_mask = "aa00";
+defparam \gatedbus_IE02|A0toB0 .operation_mode = "normal";
+defparam \gatedbus_IE02|A0toB0 .output_mode = "comb_only";
+defparam \gatedbus_IE02|A0toB0 .register_cascade_mode = "off";
+defparam \gatedbus_IE02|A0toB0 .sum_lutc_input = "datac";
+defparam \gatedbus_IE02|A0toB0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N2
+maxii_lcell \ledseqdec_IE01|led0and~2 (
+// Equation(s):
+// \ledseqdec_IE01|led0and~2_combout  = (\CH5~combout  & (!\CH4~combout  & (\gatedbus_IE01|A0toB0~6_combout  & \ledseqdec_IE01|led0and~0_combout )))
+
+	.clk(gnd),
+	.dataa(\CH5~combout ),
+	.datab(\CH4~combout ),
+	.datac(\gatedbus_IE01|A0toB0~6_combout ),
+	.datad(\ledseqdec_IE01|led0and~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE01|led0and~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE01|led0and~2 .lut_mask = "2000";
+defparam \ledseqdec_IE01|led0and~2 .operation_mode = "normal";
+defparam \ledseqdec_IE01|led0and~2 .output_mode = "comb_only";
+defparam \ledseqdec_IE01|led0and~2 .register_cascade_mode = "off";
+defparam \ledseqdec_IE01|led0and~2 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE01|led0and~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N7
+maxii_lcell \gatedbus_IE01|A0toB0 (
+// Equation(s):
+// \gatedbus_IE01|A0toB0~combout  = (\gatedbus_IE01|A0toB0~6_combout  & (((\CH6~combout ))))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE01|A0toB0~6_combout ),
+	.datab(vcc),
+	.datac(\CH6~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\gatedbus_IE01|A0toB0~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \gatedbus_IE01|A0toB0 .lut_mask = "a0a0";
+defparam \gatedbus_IE01|A0toB0 .operation_mode = "normal";
+defparam \gatedbus_IE01|A0toB0 .output_mode = "comb_only";
+defparam \gatedbus_IE01|A0toB0 .register_cascade_mode = "off";
+defparam \gatedbus_IE01|A0toB0 .sum_lutc_input = "datac";
+defparam \gatedbus_IE01|A0toB0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N1
+maxii_lcell \ledseqdec_IE02|led0and~2 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~2_combout  = (\ledseqdec_IE02|led0and~0_combout  & (!\CH0~combout  & (\CH1~combout  & \gatedbus_IE02|A0toB0~6_combout )))
+
+	.clk(gnd),
+	.dataa(\ledseqdec_IE02|led0and~0_combout ),
+	.datab(\CH0~combout ),
+	.datac(\CH1~combout ),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~2 .lut_mask = "2000";
+defparam \ledseqdec_IE02|led0and~2 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~2 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~2 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~2 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N0
+maxii_lcell \comb~1 (
+// Equation(s):
+// \comb~1_combout  = (\gatedbus_IE02|A0toB0~combout  & (\ledseqdec_IE01|led0and~2_combout  & (!\gatedbus_IE01|A0toB0~combout ))) # (!\gatedbus_IE02|A0toB0~combout  & ((\ledseqdec_IE02|led0and~2_combout ) # ((\ledseqdec_IE01|led0and~2_combout  & 
+// !\gatedbus_IE01|A0toB0~combout ))))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE02|A0toB0~combout ),
+	.datab(\ledseqdec_IE01|led0and~2_combout ),
+	.datac(\gatedbus_IE01|A0toB0~combout ),
+	.datad(\ledseqdec_IE02|led0and~2_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~1 .lut_mask = "5d0c";
+defparam \comb~1 .operation_mode = "normal";
+defparam \comb~1 .output_mode = "comb_only";
+defparam \comb~1 .register_cascade_mode = "off";
+defparam \comb~1 .sum_lutc_input = "datac";
+defparam \comb~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxii_lcell \comb~2 (
+// Equation(s):
+// \comb~2_combout  = (\gatedbus_IE01|A1toB1~combout  & ((\ledseqdec_IE01|led0and~1_combout ) # ((\gatedbus_IE02|A1toB1~combout  & \ledseqdec_IE02|led0and~1_combout )))) # (!\gatedbus_IE01|A1toB1~combout  & (((\gatedbus_IE02|A1toB1~combout  & 
+// \ledseqdec_IE02|led0and~1_combout ))))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE01|A1toB1~combout ),
+	.datab(\ledseqdec_IE01|led0and~1_combout ),
+	.datac(\gatedbus_IE02|A1toB1~combout ),
+	.datad(\ledseqdec_IE02|led0and~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~2 .lut_mask = "f888";
+defparam \comb~2 .operation_mode = "normal";
+defparam \comb~2 .output_mode = "comb_only";
+defparam \comb~2 .register_cascade_mode = "off";
+defparam \comb~2 .sum_lutc_input = "datac";
+defparam \comb~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N3
+maxii_lcell \ledseqdec_IE02|led0and~4 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~4_combout  = (\CH2~combout  & (((!\CH1~combout  & \gatedbus_IE02|A0toB0~6_combout ))))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(vcc),
+	.datac(\CH1~combout ),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~4 .lut_mask = "0a00";
+defparam \ledseqdec_IE02|led0and~4 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~4 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~4 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~4 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N4
+maxii_lcell \ledseqdec_IE01|led0and~3 (
+// Equation(s):
+// \ledseqdec_IE01|led0and~3_combout  = ((\ledseqdec_IE01|led0and~0_combout  & ((!\gatedbus_IE01|A0toB0~6_combout ) # (!\CH4~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH4~combout ),
+	.datac(\gatedbus_IE01|A0toB0~6_combout ),
+	.datad(\ledseqdec_IE01|led0and~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE01|led0and~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE01|led0and~3 .lut_mask = "3f00";
+defparam \ledseqdec_IE01|led0and~3 .operation_mode = "normal";
+defparam \ledseqdec_IE01|led0and~3 .output_mode = "comb_only";
+defparam \ledseqdec_IE01|led0and~3 .register_cascade_mode = "off";
+defparam \ledseqdec_IE01|led0and~3 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE01|led0and~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N9
+maxii_lcell \ledseqdec_IE01|led0and~4 (
+// Equation(s):
+// \ledseqdec_IE01|led0and~4_combout  = (\CH6~combout  & (((\gatedbus_IE01|A0toB0~6_combout  & !\CH5~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(vcc),
+	.datac(\gatedbus_IE01|A0toB0~6_combout ),
+	.datad(\CH5~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE01|led0and~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE01|led0and~4 .lut_mask = "00a0";
+defparam \ledseqdec_IE01|led0and~4 .operation_mode = "normal";
+defparam \ledseqdec_IE01|led0and~4 .output_mode = "comb_only";
+defparam \ledseqdec_IE01|led0and~4 .register_cascade_mode = "off";
+defparam \ledseqdec_IE01|led0and~4 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE01|led0and~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N5
+maxii_lcell \ledseqdec_IE02|led0and~3 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~3_combout  = (\ledseqdec_IE02|led0and~0_combout  & (((!\gatedbus_IE02|A0toB0~6_combout )) # (!\CH0~combout )))
+
+	.clk(gnd),
+	.dataa(\ledseqdec_IE02|led0and~0_combout ),
+	.datab(\CH0~combout ),
+	.datac(vcc),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~3 .lut_mask = "22aa";
+defparam \ledseqdec_IE02|led0and~3 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~3 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~3 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~3 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N6
+maxii_lcell \comb~3 (
+// Equation(s):
+// \comb~3_combout  = (\ledseqdec_IE02|led0and~4_combout  & ((\ledseqdec_IE02|led0and~3_combout ) # ((\ledseqdec_IE01|led0and~3_combout  & \ledseqdec_IE01|led0and~4_combout )))) # (!\ledseqdec_IE02|led0and~4_combout  & (\ledseqdec_IE01|led0and~3_combout  & 
+// (\ledseqdec_IE01|led0and~4_combout )))
+
+	.clk(gnd),
+	.dataa(\ledseqdec_IE02|led0and~4_combout ),
+	.datab(\ledseqdec_IE01|led0and~3_combout ),
+	.datac(\ledseqdec_IE01|led0and~4_combout ),
+	.datad(\ledseqdec_IE02|led0and~3_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~3 .lut_mask = "eac0";
+defparam \comb~3 .operation_mode = "normal";
+defparam \comb~3 .output_mode = "comb_only";
+defparam \comb~3 .register_cascade_mode = "off";
+defparam \comb~3 .sum_lutc_input = "datac";
+defparam \comb~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N6
+maxii_lcell \ledseqdec_IE01|led0and~5 (
+// Equation(s):
+// \ledseqdec_IE01|led0and~5_combout  = ((\CH4~combout  & (\gatedbus_IE01|A0toB0~6_combout  & \ledseqdec_IE01|led0and~0_combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH4~combout ),
+	.datac(\gatedbus_IE01|A0toB0~6_combout ),
+	.datad(\ledseqdec_IE01|led0and~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE01|led0and~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE01|led0and~5 .lut_mask = "c000";
+defparam \ledseqdec_IE01|led0and~5 .operation_mode = "normal";
+defparam \ledseqdec_IE01|led0and~5 .output_mode = "comb_only";
+defparam \ledseqdec_IE01|led0and~5 .register_cascade_mode = "off";
+defparam \ledseqdec_IE01|led0and~5 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE01|led0and~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N7
+maxii_lcell \ledseqdec_IE02|led0and~5 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~5_combout  = (\ledseqdec_IE02|led0and~0_combout  & (\CH0~combout  & ((\gatedbus_IE02|A0toB0~6_combout ))))
+
+	.clk(gnd),
+	.dataa(\ledseqdec_IE02|led0and~0_combout ),
+	.datab(\CH0~combout ),
+	.datac(vcc),
+	.datad(\gatedbus_IE02|A0toB0~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~5 .lut_mask = "8800";
+defparam \ledseqdec_IE02|led0and~5 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~5 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~5 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~5 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N2
+maxii_lcell \comb~4 (
+// Equation(s):
+// \comb~4_combout  = (\ledseqdec_IE01|led0and~4_combout  & ((\ledseqdec_IE01|led0and~5_combout ) # ((\ledseqdec_IE02|led0and~5_combout  & \ledseqdec_IE02|led0and~4_combout )))) # (!\ledseqdec_IE01|led0and~4_combout  & (((\ledseqdec_IE02|led0and~5_combout  & 
+// \ledseqdec_IE02|led0and~4_combout ))))
+
+	.clk(gnd),
+	.dataa(\ledseqdec_IE01|led0and~4_combout ),
+	.datab(\ledseqdec_IE01|led0and~5_combout ),
+	.datac(\ledseqdec_IE02|led0and~5_combout ),
+	.datad(\ledseqdec_IE02|led0and~4_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~4 .lut_mask = "f888";
+defparam \comb~4 .operation_mode = "normal";
+defparam \comb~4 .output_mode = "comb_only";
+defparam \comb~4 .register_cascade_mode = "off";
+defparam \comb~4 .sum_lutc_input = "datac";
+defparam \comb~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N3
+maxii_lcell \comb~5 (
+// Equation(s):
+// \comb~5_combout  = (\gatedbus_IE02|A0toB0~combout  & ((\ledseqdec_IE02|led0and~2_combout ) # ((\ledseqdec_IE01|led0and~2_combout  & \gatedbus_IE01|A0toB0~combout )))) # (!\gatedbus_IE02|A0toB0~combout  & (\ledseqdec_IE01|led0and~2_combout  & 
+// (\gatedbus_IE01|A0toB0~combout )))
+
+	.clk(gnd),
+	.dataa(\gatedbus_IE02|A0toB0~combout ),
+	.datab(\ledseqdec_IE01|led0and~2_combout ),
+	.datac(\gatedbus_IE01|A0toB0~combout ),
+	.datad(\ledseqdec_IE02|led0and~2_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~5 .lut_mask = "eac0";
+defparam \comb~5 .operation_mode = "normal";
+defparam \comb~5 .output_mode = "comb_only";
+defparam \comb~5 .register_cascade_mode = "off";
+defparam \comb~5 .sum_lutc_input = "datac";
+defparam \comb~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X6_Y2_N8
+maxii_lcell \ledseqdec_IE02|led0and~6 (
+// Equation(s):
+// \ledseqdec_IE02|led0and~6_combout  = (\CH2~combout  & (\gatedbus_IE02|A0toB0~6_combout  & (\CH1~combout  & \ledseqdec_IE02|led0and~5_combout )))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(\gatedbus_IE02|A0toB0~6_combout ),
+	.datac(\CH1~combout ),
+	.datad(\ledseqdec_IE02|led0and~5_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\ledseqdec_IE02|led0and~6_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \ledseqdec_IE02|led0and~6 .lut_mask = "8000";
+defparam \ledseqdec_IE02|led0and~6 .operation_mode = "normal";
+defparam \ledseqdec_IE02|led0and~6 .output_mode = "comb_only";
+defparam \ledseqdec_IE02|led0and~6 .register_cascade_mode = "off";
+defparam \ledseqdec_IE02|led0and~6 .sum_lutc_input = "datac";
+defparam \ledseqdec_IE02|led0and~6 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N5
+maxii_lcell \comb~6 (
+// Equation(s):
+// \comb~6_combout  = (\ledseqdec_IE02|led0and~6_combout ) # ((\ledseqdec_IE01|led0and~5_combout  & (\gatedbus_IE01|A1toB1~combout  & \gatedbus_IE01|A0toB0~combout )))
+
+	.clk(gnd),
+	.dataa(\ledseqdec_IE01|led0and~5_combout ),
+	.datab(\gatedbus_IE01|A1toB1~combout ),
+	.datac(\gatedbus_IE01|A0toB0~combout ),
+	.datad(\ledseqdec_IE02|led0and~6_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\comb~6_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \comb~6 .lut_mask = "ff80";
+defparam \comb~6 .operation_mode = "normal";
+defparam \comb~6 .output_mode = "comb_only";
+defparam \comb~6 .register_cascade_mode = "off";
+defparam \comb~6 .sum_lutc_input = "datac";
+defparam \comb~6 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED0~I (
-	.datain(gnd),
+	.datain(\comb~0_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED0));
@@ -791,9 +1760,9 @@ maxii_io \LED0~I (
 defparam \LED0~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_77,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_47,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED1~I (
-	.datain(gnd),
+	.datain(\comb~1_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED1));
@@ -801,9 +1770,9 @@ maxii_io \LED1~I (
 defparam \LED1~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_81,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED2~I (
-	.datain(gnd),
+	.datain(\comb~2_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED2));
@@ -811,9 +1780,9 @@ maxii_io \LED2~I (
 defparam \LED2~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_95,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_57,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED3~I (
-	.datain(gnd),
+	.datain(\comb~3_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED3));
@@ -821,9 +1790,9 @@ maxii_io \LED3~I (
 defparam \LED3~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_62,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED4~I (
-	.datain(gnd),
+	.datain(\comb~4_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED4));
@@ -831,9 +1800,9 @@ maxii_io \LED4~I (
 defparam \LED4~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_43,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_88,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED5~I (
-	.datain(gnd),
+	.datain(\comb~5_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED5));
@@ -841,9 +1810,9 @@ maxii_io \LED5~I (
 defparam \LED5~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_37,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LED6~I (
-	.datain(gnd),
+	.datain(\comb~6_combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(LED6));
@@ -851,7 +1820,7 @@ maxii_io \LED6~I (
 defparam \LED6~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \COL0~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -861,7 +1830,7 @@ maxii_io \COL0~I (
 defparam \COL0~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_53,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \COL1~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -871,7 +1840,7 @@ maxii_io \COL1~I (
 defparam \COL1~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_54,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_76,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \COL2~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -881,7 +1850,7 @@ maxii_io \COL2~I (
 defparam \COL2~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_29,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_58,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \COL3~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -891,7 +1860,7 @@ maxii_io \COL3~I (
 defparam \COL3~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_37,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_83,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \COL4~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -901,7 +1870,7 @@ maxii_io \COL4~I (
 defparam \COL4~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_76,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \COL5~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -911,7 +1880,7 @@ maxii_io \COL5~I (
 defparam \COL5~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN0~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -921,7 +1890,7 @@ maxii_io \LIN0~I (
 defparam \LIN0~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_97,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN1~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -931,7 +1900,7 @@ maxii_io \LIN1~I (
 defparam \LIN1~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN2~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -941,7 +1910,7 @@ maxii_io \LIN2~I (
 defparam \LIN2~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN3~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -951,7 +1920,7 @@ maxii_io \LIN3~I (
 defparam \LIN3~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_84,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN4~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -961,7 +1930,7 @@ maxii_io \LIN4~I (
 defparam \LIN4~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_99,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN5~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -971,7 +1940,7 @@ maxii_io \LIN5~I (
 defparam \LIN5~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// Location: PIN_49,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \LIN6~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -983,7 +1952,7 @@ defparam \LIN6~I .operation_mode = "output";
 
 // Location: PIN_90,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDA~I (
-	.datain(!\ssdisplay_0|comb~0_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDA));
@@ -993,7 +1962,7 @@ defparam \SGDA~I .operation_mode = "output";
 
 // Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDB~I (
-	.datain(!\ssdisplay_0|comb~1_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDB));
@@ -1003,7 +1972,7 @@ defparam \SGDB~I .operation_mode = "output";
 
 // Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDC~I (
-	.datain(!\ssdisplay_0|comb~2_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDC));
@@ -1013,7 +1982,7 @@ defparam \SGDC~I .operation_mode = "output";
 
 // Location: PIN_98,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDD~I (
-	.datain(!\ssdisplay_0|comb~0_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDD));
@@ -1023,7 +1992,7 @@ defparam \SGDD~I .operation_mode = "output";
 
 // Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDE~I (
-	.datain(!\ssdisplay_0|comb~3_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDE));
@@ -1033,7 +2002,7 @@ defparam \SGDE~I .operation_mode = "output";
 
 // Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDF~I (
-	.datain(!\ssdisplay_0|comb~4_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDF));
@@ -1043,7 +2012,7 @@ defparam \SGDF~I .operation_mode = "output";
 
 // Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \SGDG~I (
-	.datain(!\ssdisplay_0|comb~5_combout ),
+	.datain(vcc),
 	.oe(vcc),
 	.combout(),
 	.padio(SGDG));

@@ -2,22 +2,22 @@
 CH0 => CH0.IN4
 CH1 => CH1.IN4
 CH2 => CH2.IN4
-CH3 => CH3.IN3
+CH3 => CH3.IN4
 CH4 => CH4.IN4
 CH5 => CH5.IN4
 CH6 => CH6.IN4
-CH7 => CH7.IN3
-BT0 => NBT0.IN3
-BT1 => NBT1.IN3
-BT2 => NBT2.IN3
-BT3 => NBT3.IN3
-LED0 <= <GND>
-LED1 <= <GND>
-LED2 <= <GND>
-LED3 <= <GND>
-LED4 <= <GND>
-LED5 <= <GND>
-LED6 <= <GND>
+CH7 => CH7.IN4
+BT0 => NBT0.IN4
+BT1 => NBT1.IN4
+BT2 => NBT2.IN4
+BT3 => NBT3.IN4
+LED0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED4 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED5 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED6 <= comb.DB_MAX_OUTPUT_PORT_TYPE
 COL0 <= <GND>
 COL1 <= <GND>
 COL2 <= <GND>
@@ -40,7 +40,7 @@ SGDF <= sevensegmentdisplay:ssdisplay_0.segf
 SGDG <= sevensegmentdisplay:ssdisplay_0.segg
 
 
-|mainmodule|allpermission:allperm_0
+|mainmodule|allpermission:allperm_IE01
 A => permission0.IN0
 A => permission4.IN0
 A => permission5.IN0
@@ -76,7 +76,7 @@ F => permission5.IN5
 permout <= finalcheck.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mainmodule|allpermission:allperm_1
+|mainmodule|allpermission:allperm_IE02
 A => permission0.IN0
 A => permission4.IN0
 A => permission5.IN0
@@ -155,7 +155,7 @@ F => cfparity.IN1
 cftout <= cftfree.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mainmodule|unidirbustrans3b:busIE01
+|mainmodule|unidirbustrans3b:gatedbus_IE01
 A0 => A0toB0.IN1
 A1 => A1toB1.IN1
 A2 => A2toB2.IN1
@@ -169,7 +169,7 @@ B1 <= A1toB1.DB_MAX_OUTPUT_PORT_TYPE
 B2 <= A2toB2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mainmodule|unidirbustrans3b:busIE02
+|mainmodule|unidirbustrans3b:gatedbus_IE02
 A0 => A0toB0.IN1
 A1 => A1toB1.IN1
 A2 => A2toB2.IN1
@@ -192,6 +192,31 @@ E => WideAnd1.IN1
 F => WideAnd1.IN2
 priorsel => max0condition.IN1
 displaysel <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|mux6to3:dpvalidatormux_0
+A => out00and0.IN0
+B => out01and0.IN0
+C => out02and0.IN0
+D => out00and1.IN0
+E => out01and1.IN0
+F => out02and1.IN0
+sel => out00and1.IN1
+sel => out01and1.IN1
+sel => out02and1.IN1
+sel => out00and0.IN1
+sel => out01and0.IN1
+sel => out02and0.IN1
+out0 <= finalout0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= finalout1.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= finalout2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|displayvalidator:dpval_0
+A => ~NO_FANOUT~
+B => ~NO_FANOUT~
+C => ~NO_FANOUT~
+validout <= <GND>
 
 
 |mainmodule|mux6to3:displaymux_0
@@ -223,12 +248,13 @@ C => and0.IN1
 C => and2.IN1
 C => and3.IN2
 C => and1.IN2
-D => ft2chkand1.IN0
-E => ft2chkand1.IN1
-F => ft2chkand1.IN2
-G => ft2chkand2.IN0
-H => ft2chkand2.IN1
-I => ft2chkand2.IN2
+dpval => comb.IN1
+dpval => comb.IN1
+dpval => comb.IN1
+dpval => comb.IN1
+dpval => comb.IN1
+dpval => comb.IN1
+dpval => comb.IN1
 sega <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segb <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segc <= comb.DB_MAX_OUTPUT_PORT_TYPE
@@ -236,5 +262,171 @@ segd <= comb.DB_MAX_OUTPUT_PORT_TYPE
 sege <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segg <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|ledinterfaceselector:ledifsel_IE01
+A => abxor.IN0
+B => abxor.IN1
+C => comb.IN1
+ledsel <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|ledinterfaceselector:ledifsel_IE02
+A => abxor.IN0
+B => abxor.IN1
+C => comb.IN1
+ledsel <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|ledsequencedecoder:ledseqdec_IE01
+A => led3and.IN0
+A => led4and.IN0
+A => led5and.IN0
+A => led6and.IN0
+A => led0and.IN0
+A => led1and.IN0
+A => led2and.IN0
+B => led1and.IN1
+B => led2and.IN1
+B => led5and.IN1
+B => led6and.IN1
+B => led0and.IN1
+B => led3and.IN1
+B => led4and.IN1
+C => led0and.IN2
+C => led2and.IN2
+C => led4and.IN2
+C => led6and.IN2
+C => led1and.IN2
+C => led3and.IN2
+C => led5and.IN2
+out0 <= led0and.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= led1and.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= led2and.DB_MAX_OUTPUT_PORT_TYPE
+out3 <= led3and.DB_MAX_OUTPUT_PORT_TYPE
+out4 <= led4and.DB_MAX_OUTPUT_PORT_TYPE
+out5 <= led5and.DB_MAX_OUTPUT_PORT_TYPE
+out6 <= led6and.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|ledsequencedecoder:ledseqdec_IE02
+A => led3and.IN0
+A => led4and.IN0
+A => led5and.IN0
+A => led6and.IN0
+A => led0and.IN0
+A => led1and.IN0
+A => led2and.IN0
+B => led1and.IN1
+B => led2and.IN1
+B => led5and.IN1
+B => led6and.IN1
+B => led0and.IN1
+B => led3and.IN1
+B => led4and.IN1
+C => led0and.IN2
+C => led2and.IN2
+C => led4and.IN2
+C => led6and.IN2
+C => led1and.IN2
+C => led3and.IN2
+C => led5and.IN2
+out0 <= led0and.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= led1and.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= led2and.DB_MAX_OUTPUT_PORT_TYPE
+out3 <= led3and.DB_MAX_OUTPUT_PORT_TYPE
+out4 <= led4and.DB_MAX_OUTPUT_PORT_TYPE
+out5 <= led5and.DB_MAX_OUTPUT_PORT_TYPE
+out6 <= led6and.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|mux7to14:mux7to14_IE01
+A => out00and.IN0
+A => out07and.IN0
+B => out01and.IN0
+B => out08and.IN0
+C => out02and.IN0
+C => out09and.IN0
+D => out03and.IN0
+D => out10and.IN0
+E => out04and.IN0
+E => out11and.IN0
+F => out05and.IN0
+F => out12and.IN0
+G => out06and.IN0
+G => out13and.IN0
+sel => out07and.IN1
+sel => out08and.IN1
+sel => out09and.IN1
+sel => out10and.IN1
+sel => out11and.IN1
+sel => out12and.IN1
+sel => out13and.IN1
+sel => out00and.IN1
+sel => out01and.IN1
+sel => out02and.IN1
+sel => out03and.IN1
+sel => out04and.IN1
+sel => out05and.IN1
+sel => out06and.IN1
+out00 <= out00and.DB_MAX_OUTPUT_PORT_TYPE
+out01 <= out01and.DB_MAX_OUTPUT_PORT_TYPE
+out02 <= out02and.DB_MAX_OUTPUT_PORT_TYPE
+out03 <= out03and.DB_MAX_OUTPUT_PORT_TYPE
+out04 <= out04and.DB_MAX_OUTPUT_PORT_TYPE
+out05 <= out05and.DB_MAX_OUTPUT_PORT_TYPE
+out06 <= out06and.DB_MAX_OUTPUT_PORT_TYPE
+out07 <= out07and.DB_MAX_OUTPUT_PORT_TYPE
+out08 <= out08and.DB_MAX_OUTPUT_PORT_TYPE
+out09 <= out09and.DB_MAX_OUTPUT_PORT_TYPE
+out10 <= out10and.DB_MAX_OUTPUT_PORT_TYPE
+out11 <= out11and.DB_MAX_OUTPUT_PORT_TYPE
+out12 <= out12and.DB_MAX_OUTPUT_PORT_TYPE
+out13 <= out13and.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|mux7to14:mux7to14_IE02
+A => out00and.IN0
+A => out07and.IN0
+B => out01and.IN0
+B => out08and.IN0
+C => out02and.IN0
+C => out09and.IN0
+D => out03and.IN0
+D => out10and.IN0
+E => out04and.IN0
+E => out11and.IN0
+F => out05and.IN0
+F => out12and.IN0
+G => out06and.IN0
+G => out13and.IN0
+sel => out07and.IN1
+sel => out08and.IN1
+sel => out09and.IN1
+sel => out10and.IN1
+sel => out11and.IN1
+sel => out12and.IN1
+sel => out13and.IN1
+sel => out00and.IN1
+sel => out01and.IN1
+sel => out02and.IN1
+sel => out03and.IN1
+sel => out04and.IN1
+sel => out05and.IN1
+sel => out06and.IN1
+out00 <= out00and.DB_MAX_OUTPUT_PORT_TYPE
+out01 <= out01and.DB_MAX_OUTPUT_PORT_TYPE
+out02 <= out02and.DB_MAX_OUTPUT_PORT_TYPE
+out03 <= out03and.DB_MAX_OUTPUT_PORT_TYPE
+out04 <= out04and.DB_MAX_OUTPUT_PORT_TYPE
+out05 <= out05and.DB_MAX_OUTPUT_PORT_TYPE
+out06 <= out06and.DB_MAX_OUTPUT_PORT_TYPE
+out07 <= out07and.DB_MAX_OUTPUT_PORT_TYPE
+out08 <= out08and.DB_MAX_OUTPUT_PORT_TYPE
+out09 <= out09and.DB_MAX_OUTPUT_PORT_TYPE
+out10 <= out10and.DB_MAX_OUTPUT_PORT_TYPE
+out11 <= out11and.DB_MAX_OUTPUT_PORT_TYPE
+out12 <= out12and.DB_MAX_OUTPUT_PORT_TYPE
+out13 <= out13and.DB_MAX_OUTPUT_PORT_TYPE
 
 
