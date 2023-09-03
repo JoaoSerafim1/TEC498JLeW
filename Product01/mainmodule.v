@@ -7,10 +7,12 @@ SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entra
 	//Declara elementos de entrada (chaves HH e botoes)
 	input CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7, BT0, BT1, BT2, BT3;
 	
-	//Declara elementos de saida (LEDS, Display de 7 Segmentos, e saida temporaria de teste)
+	//Declara elementos de saida (LED Sequencial, Matrix de LED e Display de 7 Segmentos)
 	output LED0, LED1, LED2, LED3, LED4, LED5, LED6,
-	
-	COL0, COL1, COL2, COL3, COL4, LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
+
+	COL0, COL1, COL2, COL3, COL4,
+	LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
+
 	SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG;
 	
 	//Declara os fios utilizados para conectar os modulos
@@ -47,6 +49,7 @@ not (NBT3, BT3);
 //Negacao do seletor de prioridade do BUS Transceiver da IE01
 not (Npriorselwire, priorselwire);
 
+//Instancia do modulo de permissoes - IE01
 allpermission allperm_IE01 (
 		.A (CH7),
 		.B (NBT3),
@@ -57,6 +60,7 @@ allpermission allperm_IE01 (
 		.permout (permIE01)
 );
 
+//Instancia do modulo de permissoes - IE02
 allpermission allperm_IE02 (
 		.A (CH3),
 		.B (NBT1),
@@ -67,6 +71,7 @@ allpermission allperm_IE02 (
 		.permout (permIE02)
 );
 
+//Instancia do modulo seletor de prioridade
 entryinterfaceselector eisel_0 (
 		.A (CH7),
 		.B (NBT3),
@@ -77,6 +82,7 @@ entryinterfaceselector eisel_0 (
 		.entitfsel (priorselwire)
 );
 
+//Instancia do modulo de verificacao de conflito de funcionalidade
 featureconflictchecker ftcftchk_0 (
 		.A (CH6),
 		.B (CH5),
@@ -87,6 +93,7 @@ featureconflictchecker ftcftchk_0 (
 		.cftout (cftchkwire)
 );
 
+//Instancia do BUS TRANSCEIVER das funcionalidades - IE01
 unidirbustrans3b gatedbus_IE01 (
 		.A0 (CH6),
 		.A1 (CH5),
@@ -99,6 +106,7 @@ unidirbustrans3b gatedbus_IE01 (
 		.B2 (featurebitIE01[2])
 );
 
+//Instancia do BUS TRANSCEIVER das funcionalidades - IE02
 unidirbustrans3b gatedbus_IE02 (
 		.A0 (CH2),
 		.A1 (CH1),
@@ -111,6 +119,7 @@ unidirbustrans3b gatedbus_IE02 (
 		.B2 (featurebitIE02[2])
 );
 
+//Instancia do seletor da entrada do display de 7 segmentos
 sevendisplayselector sevensel_0 (
 		.A (CH6),
 		.B (CH5),
@@ -122,6 +131,7 @@ sevendisplayselector sevensel_0 (
 		.displaysel (sevenselwire)
 );
 
+//Instancia do MULTIPLEX (6:3) das funcionalidades das duas interfaces
 mux6to3 dpvalidatormux_0 (
 		.A (featurebitIE02[0]),
 		.B (featurebitIE02[1]),
@@ -135,6 +145,7 @@ mux6to3 dpvalidatormux_0 (
 		.out2 (mux6to3ToValidator2)
 );
 
+//Validador de usuario na interface selecionada como possivelmente executando a funcionalidade 2
 displayvalidator dpval_0 (
 		.A (mux6to3ToValidator0),
 		.B (mux6to3ToValidator1),
@@ -142,6 +153,7 @@ displayvalidator dpval_0 (
 		.validout (displayvalwire)
 );
 
+//Instancia do MULTIPLEX (6:3) do usuario das duas interfaces
 mux6to3 displaymux_0 (
 		.A (CH7),
 		.B (NBT3),
@@ -155,6 +167,7 @@ mux6to3 displaymux_0 (
 		.out2 (mux6to3ToDisplay2)
 );
 
+//Instancia do decodificador para o display de 7 segmentos
 sevensegmentdisplay ssdisplay_0 (
 		.A (mux6to3ToDisplay0),
 		.B (mux6to3ToDisplay1),
@@ -169,20 +182,7 @@ sevensegmentdisplay ssdisplay_0 (
 		.segg (SGDG)
 );
 
-ledinterfaceselector ledifsel_IE01 (
-		.A (CH7),
-		.B (NBT3),
-		.C (NBT2),
-		.ledsel (ledselwireIE01)
-);
-
-ledinterfaceselector ledifsel_IE02 (
-		.A (CH3),
-		.B (NBT1),
-		.C (NBT0),
-		.ledsel (ledselwireIE02)
-);
-
+//Instancia do decodificador BIN para 1-6, para saber qual LED deve ser aceso - IE01
 ledsequencedecoder ledseqdec_IE01(
 		.A (featurebitIE01[0]),
 		.B (featurebitIE01[1]),
@@ -196,6 +196,7 @@ ledsequencedecoder ledseqdec_IE01(
 		.out6 (ledwireIE01[6])
 );
 
+//Instancia do decodificador BIN para 1-6, para saber qual LED deve ser aceso - IE02
 ledsequencedecoder ledseqdec_IE02(
 		.A (featurebitIE02[0]),
 		.B (featurebitIE02[1]),
@@ -209,6 +210,23 @@ ledsequencedecoder ledseqdec_IE02(
 		.out6 (ledwireIE02[6])
 );
 
+//Instancia do seletor da interface de saidas LED - IE01
+ledinterfaceselector ledifsel_IE01 (
+		.A (CH7),
+		.B (NBT3),
+		.C (NBT2),
+		.ledsel (ledselwireIE01)
+);
+
+//Instancia do seletor da interface de saidas LED - IE02
+ledinterfaceselector ledifsel_IE02 (
+		.A (CH3),
+		.B (NBT1),
+		.C (NBT0),
+		.ledsel (ledselwireIE02)
+);
+
+//Instancia do (de)MULTIPLEX (7:14) das interfaces de saidas LED (IS01 ou IS02) - IE01
 mux7to14 mux7to14_IE01(
 		.A (ledwireIE01[0]),
 		.B (ledwireIE01[1]),
@@ -234,6 +252,7 @@ mux7to14 mux7to14_IE01(
 		.out13 (seqledwireIE01[6])
 );
 
+//Instancia do (de)MULTIPLEX (7:14) das interfaces de saidas LED (IS01 ou IS02) - IE02
 mux7to14 mux7to14_IE02(
 		.A (ledwireIE02[0]),
 		.B (ledwireIE02[1]),
@@ -259,6 +278,7 @@ mux7to14 mux7to14_IE02(
 		.out13 (seqledwireIE02[6])
 );
 
+//Condicoes de ligar linhas da matriz de LED (IS01)
 nor (LIN0, lattledwireIE01[0], lattledwireIE02[0]);
 nor (LIN1, lattledwireIE01[1], lattledwireIE02[1]);
 nor (LIN2, lattledwireIE01[2], lattledwireIE02[2]);
@@ -266,6 +286,7 @@ nor (LIN3, lattledwireIE01[3], lattledwireIE02[3]);
 nor (LIN4, lattledwireIE01[4], lattledwireIE02[4]);
 nor (LIN5, lattledwireIE01[5], lattledwireIE02[5]);
 nor (LIN6, lattledwireIE01[6], lattledwireIE02[6]);
+//Manter sempre as colunas ligadas caso exista algum usuario utilizando funcionalidade permitida
 or (possiblelattoutput, permIE01, permIE01);
 assign COL0 = possiblelattoutput;
 assign COL1 = possiblelattoutput;
@@ -273,6 +294,7 @@ assign COL2 = possiblelattoutput;
 assign COL3 = possiblelattoutput;
 assign COL4 = possiblelattoutput;
 
+//Condicoes de ligar unidades LED (IS02)
 or (LED0, seqledwireIE01[0], seqledwireIE02[0]);
 or (LED1, seqledwireIE01[1], seqledwireIE02[1]);
 or (LED2, seqledwireIE01[2], seqledwireIE02[2]);
