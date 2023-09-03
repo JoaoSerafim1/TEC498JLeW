@@ -1,5 +1,5 @@
 Assembler report for switchandbuttoninput
-Sat Sep 02 19:29:04 2023
+Sun Sep 03 00:07:25 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Sep 02 19:29:04 2023 ;
+; Assembler Status      ; Successful - Sun Sep 03 00:07:24 2023 ;
 ; Revision Name         ; switchandbuttoninput                  ;
 ; Top-level Entity Name ; mainmodule                            ;
 ; Family                ; MAX II                                ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-----------------------------------------------------------------------------+
 ; Option         ; Setting                                                                     ;
 +----------------+-----------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00188E3B                                                                  ;
-; Checksum       ; 0x0018913B                                                                  ;
+; JTAG usercode  ; 0x00188A96                                                                  ;
+; Checksum       ; 0x00188E1E                                                                  ;
 +----------------+-----------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 02 19:29:02 2023
+    Info: Processing started: Sun Sep 03 00:07:23 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4663 megabytes
-    Info: Processing ended: Sat Sep 02 19:29:04 2023
+    Info: Processing ended: Sun Sep 03 00:07:25 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

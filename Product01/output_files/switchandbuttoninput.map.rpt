@@ -1,5 +1,5 @@
 Analysis & Synthesis report for switchandbuttoninput
-Sat Sep 02 19:28:55 2023
+Sun Sep 03 00:07:13 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,12 +41,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Sep 02 19:28:55 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Sep 03 00:07:13 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; switchandbuttoninput                        ;
 ; Top-level Entity Name       ; mainmodule                                  ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 50                                          ;
+; Total logic elements        ; 52                                          ;
 ; Total pins                  ; 38                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -165,20 +165,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 50    ;
-;     -- Combinational with no register       ; 50    ;
+; Total logic elements                        ; 52    ;
+;     -- Combinational with no register       ; 52    ;
 ;     -- Register only                        ; 0     ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 30    ;
-;     -- 3 input functions                    ; 19    ;
+;     -- 4 input functions                    ; 31    ;
+;     -- 3 input functions                    ; 20    ;
 ;     -- 2 input functions                    ; 1     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 50    ;
+;     -- normal mode                          ; 52    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -187,10 +187,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
 ; I/O pins                                    ; 38    ;
-; Maximum fan-out node                        ; CH4   ;
-; Maximum fan-out                             ; 12    ;
-; Total fan-out                               ; 198   ;
-; Average fan-out                             ; 2.25  ;
+; Maximum fan-out node                        ; CH0   ;
+; Maximum fan-out                             ; 10    ;
+; Total fan-out                               ; 205   ;
+; Average fan-out                             ; 2.28  ;
 +---------------------------------------------+-------+
 
 
@@ -199,9 +199,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                            ; Entity Name            ; Library Name ;
 +-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
-; |mainmodule                             ; 50 (14)     ; 0            ; 0          ; 38   ; 0            ; 50 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule                                    ; mainmodule             ; work         ;
-;    |allpermission:allperm_IE01|         ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|allpermission:allperm_IE01         ; allpermission          ; work         ;
-;    |entryinterfaceselector:eisel_0|     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|entryinterfaceselector:eisel_0     ; entryinterfaceselector ; work         ;
+; |mainmodule                             ; 52 (14)     ; 0            ; 0          ; 38   ; 0            ; 52 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule                                    ; mainmodule             ; work         ;
+;    |allpermission:allperm_IE01|         ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|allpermission:allperm_IE01         ; allpermission          ; work         ;
+;    |entryinterfaceselector:eisel_0|     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|entryinterfaceselector:eisel_0     ; entryinterfaceselector ; work         ;
 ;    |ledinterfaceselector:ledifsel_IE01| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledinterfaceselector:ledifsel_IE01 ; ledinterfaceselector   ; work         ;
 ;    |ledinterfaceselector:ledifsel_IE02| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledinterfaceselector:ledifsel_IE02 ; ledinterfaceselector   ; work         ;
 ;    |mux7to14:mux7to14_IE01|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE01             ; mux7to14               ; work         ;
@@ -233,64 +233,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 02 19:28:42 2023
+    Info: Processing started: Sun Sep 03 00:06:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mainmodule.v
     Info (12023): Found entity 1: mainmodule File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file allpermission.v
-    Info (12023): Found entity 1: allpermission File: E:/JLeW/TEC498JLeW/Product01/allpermission.v Line: 1
+    Info (12023): Found entity 1: allpermission File: E:/JLeW/TEC498JLeW/Product01/allpermission.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux6to3.v
-    Info (12023): Found entity 1: mux6to3 File: E:/JLeW/TEC498JLeW/Product01/mux6to3.v Line: 1
+    Info (12023): Found entity 1: mux6to3 File: E:/JLeW/TEC498JLeW/Product01/mux6to3.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux7to14.v
-    Info (12023): Found entity 1: mux7to14 File: E:/JLeW/TEC498JLeW/Product01/mux7to14.v Line: 1
+    Info (12023): Found entity 1: mux7to14 File: E:/JLeW/TEC498JLeW/Product01/mux7to14.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentdisplay.v
-    Info (12023): Found entity 1: sevensegmentdisplay File: E:/JLeW/TEC498JLeW/Product01/sevensegmentdisplay.v Line: 1
+    Info (12023): Found entity 1: sevensegmentdisplay File: E:/JLeW/TEC498JLeW/Product01/sevensegmentdisplay.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file entryinterfaceselector.v
     Info (12023): Found entity 1: entryinterfaceselector File: E:/JLeW/TEC498JLeW/Product01/entryinterfaceselector.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file featureconflictchecker.v
-    Info (12023): Found entity 1: featureconflictchecker File: E:/JLeW/TEC498JLeW/Product01/featureconflictchecker.v Line: 1
+    Info (12023): Found entity 1: featureconflictchecker File: E:/JLeW/TEC498JLeW/Product01/featureconflictchecker.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sevendisplayselector.v
-    Info (12023): Found entity 1: sevendisplayselector File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 1
-Warning (10238): Verilog Module Declaration warning at unidirbustrans3b.v(3): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "unidirbustrans3b" File: E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 3
+    Info (12023): Found entity 1: sevendisplayselector File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 2
+Warning (10238): Verilog Module Declaration warning at unidirbustrans3b.v(4): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "unidirbustrans3b" File: E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file unidirbustrans3b.v
-    Info (12023): Found entity 1: unidirbustrans3b File: E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 1
+    Info (12023): Found entity 1: unidirbustrans3b File: E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file displayvalidator.v
-    Info (12023): Found entity 1: displayvalidator File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 1
+    Info (12023): Found entity 1: displayvalidator File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ledinterfaceselector.v
-    Info (12023): Found entity 1: ledinterfaceselector File: E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v Line: 1
+    Info (12023): Found entity 1: ledinterfaceselector File: E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ledsequencedecoder.v
-    Info (12023): Found entity 1: ledsequencedecoder File: E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 1
+    Info (12023): Found entity 1: ledsequencedecoder File: E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 2
 Info (12127): Elaborating entity "mainmodule" for the top level hierarchy
-Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 58
-Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 78
-Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 88
-Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 100
-Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 123
-Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 136
-Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 143
-Warning (10034): Output port "validout" at displayvalidator.v(6) has no driver File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 6
-Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 170
-Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 177
+Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 61
+Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 83
+Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 94
+Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 107
+Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 132
+Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 146
+Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 154
+Warning (10034): Output port "validout" at displayvalidator.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 12
+Warning (12158): Entity "displayvalidator" contains only dangling pins File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 154
+Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 183
 Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 197
-Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 235
+Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 219
+Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 253
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SGDA" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-    Warning (13410): Pin "SGDB" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-    Warning (13410): Pin "SGDC" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-    Warning (13410): Pin "SGDD" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-    Warning (13410): Pin "SGDE" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-    Warning (13410): Pin "SGDF" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-    Warning (13410): Pin "SGDG" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 14
-Info (21057): Implemented 88 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "SGDA" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+    Warning (13410): Pin "SGDB" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+    Warning (13410): Pin "SGDC" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+    Warning (13410): Pin "SGDD" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+    Warning (13410): Pin "SGDE" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+    Warning (13410): Pin "SGDF" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+    Warning (13410): Pin "SGDG" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
+Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 50 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info (21061): Implemented 52 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Sat Sep 02 19:28:56 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Processing ended: Sun Sep 03 00:07:14 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:38
 
 

@@ -11,32 +11,32 @@ BT0 => NBT0.IN4
 BT1 => NBT1.IN4
 BT2 => NBT2.IN4
 BT3 => NBT3.IN4
-LED0 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LED1 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LED2 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LED3 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LED4 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LED5 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LED6 << comb.DB_MAX_OUTPUT_PORT_TYPE
-COL0 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL1 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL2 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL3 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL4 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-LIN0 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN1 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN2 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN3 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN4 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN5 << comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN6 << comb.DB_MAX_OUTPUT_PORT_TYPE
-SGDA << sevensegmentdisplay:ssdisplay_0.sega
-SGDB << sevensegmentdisplay:ssdisplay_0.segb
-SGDC << sevensegmentdisplay:ssdisplay_0.segc
-SGDD << sevensegmentdisplay:ssdisplay_0.segd
-SGDE << sevensegmentdisplay:ssdisplay_0.sege
-SGDF << sevensegmentdisplay:ssdisplay_0.segf
-SGDG << sevensegmentdisplay:ssdisplay_0.segg
+LED0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED4 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED5 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED6 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+COL0 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL1 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL2 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL3 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL4 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
+LIN0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN4 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN5 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN6 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+SGDA <= sevensegmentdisplay:ssdisplay_0.sega
+SGDB <= sevensegmentdisplay:ssdisplay_0.segb
+SGDC <= sevensegmentdisplay:ssdisplay_0.segc
+SGDD <= sevensegmentdisplay:ssdisplay_0.segd
+SGDE <= sevensegmentdisplay:ssdisplay_0.sege
+SGDF <= sevensegmentdisplay:ssdisplay_0.segf
+SGDG <= sevensegmentdisplay:ssdisplay_0.segg
 
 
 |mainmodule|allpermission:allperm_IE01
@@ -69,7 +69,6 @@ E => permission4.IN4
 F => permission1.IN3
 F => permission4.IN5
 F => ison.IN2
-F => permission2.IN5
 F => permission3.IN3
 F => permission5.IN5
 permout <= finalcheck.DB_MAX_OUTPUT_PORT_TYPE
@@ -105,7 +104,6 @@ E => permission4.IN4
 F => permission1.IN3
 F => permission4.IN5
 F => ison.IN2
-F => permission2.IN5
 F => permission3.IN3
 F => permission5.IN5
 permout <= finalcheck.DB_MAX_OUTPUT_PORT_TYPE
@@ -263,20 +261,6 @@ segf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 segg <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mainmodule|ledinterfaceselector:ledifsel_IE01
-A => abxor.IN0
-B => abxor.IN1
-C => comb.IN1
-ledsel <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|mainmodule|ledinterfaceselector:ledifsel_IE02
-A => abxor.IN0
-B => abxor.IN1
-C => comb.IN1
-ledsel <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |mainmodule|ledsequencedecoder:ledseqdec_IE01
 A => led3and.IN0
 A => led4and.IN0
@@ -337,6 +321,20 @@ out3 <= led3and.DB_MAX_OUTPUT_PORT_TYPE
 out4 <= led4and.DB_MAX_OUTPUT_PORT_TYPE
 out5 <= led5and.DB_MAX_OUTPUT_PORT_TYPE
 out6 <= led6and.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|ledinterfaceselector:ledifsel_IE01
+A => abxor.IN0
+B => abxor.IN1
+C => comb.IN1
+ledsel <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|ledinterfaceselector:ledifsel_IE02
+A => abxor.IN0
+B => abxor.IN1
+C => comb.IN1
+ledsel <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainmodule|mux7to14:mux7to14_IE01
