@@ -16,28 +16,45 @@ SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entra
 	SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG;
 	
 	//Declara os fios utilizados para conectar os modulos
+	//Fios de negacao dos botoes
 	wire NBT0, NBT1, NBT2, NBT3,
 	
+	//Fios da permissao para passar (ALTO = permitido, BAIXO = negado) a frente a funcionalidade de cada interface de entrada
 	permIE01, permIE02,
 	
-	priorselwire, Npriorselwire, cftchkwire,
+	//Fios da selecao de prioridade de interfaces (ALTO = IE02, BAIXO = IE01) e sua negacao
+	priorselwire, Npriorselwire,
+	//Fio da verificacao de conflito (ALTO = sem conflito, BAIXO = possui conflito)
+	cftchkwire,
 	
+	//Vetores de fios de 3 bits referentes as funcionalidades apos passarem pelo
+	//BUS transceiver de autorizacao
 	featurebitIE01[2:0],
 	featurebitIE02[2:0],
 	
+	//Fio do seletor do MULTIPLEX (6:3) do display de 7 segmentos
 	sevenselwire,
-	mux6to3ToValidator0, mux6to3ToValidator1, mux6to3ToValidator2,
-	displayvalwire,
+	//Fios dos modulos validadores da funcionalidade 2 de cada interface de entrada
+	displayvalwire0, displayvalwire1,
+	//Fio cruzado da validacao da funcionalidade 2
+	//Explicacao: (se o MUX 2:1 receber ALTO no sel, passa displayvalwire0, caso contrario, passa displayvalwire1)
+	mux2to1ToDisplay,
+	//Fios selecionados do usuario a ser exibido no display, de acordo com o MUX 6:3
 	mux6to3ToDisplay0, mux6to3ToDisplay1, mux6to3ToDisplay2,
 	
+	//Fios de selecao da interface de saida para cada interface de entrada
 	ledselwireIE01, ledselwireIE02,
+	//Vetores de fios de entrada (no MUX 7:14) de 7 bits para cada interface de entrada
 	ledwireIE01 [6:0],
 	ledwireIE02 [6:0],
+	//Vetores de fios de saida (do MUX 7:14) de 7 bits da IS01 (matrix de LEDs) para cada interface de entrada
 	lattledwireIE01[6:0],
 	lattledwireIE02[6:0],
+	//Vetores de fios de saida (do MUX 7:14) de 7 bits da IS02 (LEDs sequenciais) para cada interface de entrada
 	seqledwireIE01[6:0],
 	seqledwireIE02[6:0],
 	
+	//Fio para ligar as colunas da matriz de LED aos dois fios de permissao (permIE01, permIE02)
 	possiblelattoutput;
 
 //Negacao dos botoes
@@ -119,38 +136,36 @@ unidirbustrans3b gatedbus_IE02 (
 		.B2 (featurebitIE02[2])
 );
 
+//Instancia do validador de usuario na IE01
+displayvalidator dpval_0 (
+		.A (featurebitIE01[0]),
+		.B (featurebitIE01[1]),
+		.C (featurebitIE01[2]),
+		.validout (displayvalwire0)
+);
+
+//Instancia do validador de usuario na IE01
+displayvalidator dpval_1 (
+		.A (featurebitIE02[0]),
+		.B (featurebitIE02[1]),
+		.C (featurebitIE02[2]),
+		.validout (displayvalwire1)
+);
+
 //Instancia do seletor da entrada do display de 7 segmentos
 sevendisplayselector sevensel_0 (
-		.A (CH6),
-		.B (CH5),
-		.C (CH4),
-		.D (CH2),
-		.E (CH1),
-		.F (CH0),
+		.A (displayvalwire0),
+		.B (displayvalwire1),
 		.priorsel (priorselwire),
 		.displaysel (sevenselwire)
 );
 
-//Instancia do MULTIPLEX (6:3) das funcionalidades das duas interfaces
-mux6to3 dpvalidatormux_0 (
-		.A (featurebitIE02[0]),
-		.B (featurebitIE02[1]),
-		.C (featurebitIE02[2]),
-		.D (featurebitIE01[0]),
-		.E (featurebitIE01[1]),
-		.F (featurebitIE01[2]),
+//Instancia do MULTIPLEX (2:1) da validacao das funcionalidades das duas interfaces
+mux2to1 dpvalidatormux_0 (
+		.A (displayvalwire1),
+		.B (displayvalwire0),
 		.sel (sevenselwire),
-		.out0 (mux6to3ToValidator0),
-		.out1 (mux6to3ToValidator1),
-		.out2 (mux6to3ToValidator2)
-);
-
-//Validador de usuario na interface selecionada como possivelmente executando a funcionalidade 2
-displayvalidator dpval_0 (
-		.A (mux6to3ToValidator0),
-		.B (mux6to3ToValidator1),
-		.C (mux6to3ToValidator2),
-		.validout (displayvalwire)
+		.out (mux2to1ToDisplay)
 );
 
 //Instancia do MULTIPLEX (6:3) do usuario das duas interfaces
@@ -172,7 +187,7 @@ sevensegmentdisplay ssdisplay_0 (
 		.A (mux6to3ToDisplay0),
 		.B (mux6to3ToDisplay1),
 		.C (mux6to3ToDisplay2),
-		.dpval (displayvalwire),
+		.dpval (mux2to1ToDisplay),
 		.sega (SGDA),
 		.segb (SGDB),
 		.segc (SGDC),

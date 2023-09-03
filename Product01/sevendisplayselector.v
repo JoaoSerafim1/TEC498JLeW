@@ -1,15 +1,13 @@
 //Modulo do seletor do display de 7 segmentos
-module sevendisplayselector (A, B, C,
-D, E, F,
+module sevendisplayselector (A, B,
 priorsel,
 displaysel);
 	
 	//Entradas
-	// (A, B, C) = Sequencia binaria da funcionalidade da IE01, A mais significativo
-	// (D, E, F) = Sequencia binaria da funcionalidade da IE01, D mais significativo
+	// A = Bit relacionado a estar executando (ALTO) ou nao (BAIXO) a funcionalidade 2 na IE01
+	// B = Bit relacionado a estar executando (ALTO) ou nao (BAIXO) a funcionalidade 2 na IE02
 	//priorsel = seletor de prioridade da interface de entrada (0 = prioridade da IE01, 1 = prioridade da IE02)
-	input A, B, C,
-	D, E, F,
+	input A, B,
 	priorsel;
 	
 	//Saida
@@ -17,33 +15,21 @@ displaysel);
 	output displaysel;
 	
 	//Fios do modulo
-	wire NA, NC, ND, NF,
+	wire NB,
 	Npriorsel,
-	ft2IE01,
-	ft2IE02,
-	Nft2IE01,
-	Nft2IE02,
 	max0;
 	
 
 //Negacao de algumas entradas
-not (NA, A);
-not (NC, C);
-not (ND, D);
-not (NF, F);
+not (NB, C);
 not (Npriorsel, priorsel);
 
-//Determina os booleanos das interfaces estarem acessando a funcionalidade 
-and (ft2IE01, NA, B, NC);
-and (ft2IE02, ND, E, NF);
-not (Nft2IE02, ft2IE02);
+//Parte da fatoracao dos dois mintermos (!priorsel + !B)
+or max0condition(max0, Npriorsel, NB);
 
-//Mintermo !priorsel + !ft02
-or max0condition(max0, Npriorsel, Nft2IE02);
-
-//Expressao completa (ft02IE01*(!priorsel + !ft02IE02))
+//Expressao booleana simplificada completa (A*(!priorsel + !B))
 //Passa nivel logico ALTO se e somente se a IE01 estiver executando a funcao 2
 //e, CASO ESTEJAM EXECUTANDO A MESMA FUNCIONALIDADE, seja, dentre as duas, a com o maior nivel de autoridade.
-and (displaysel, ft2IE01, max0);
+and (displaysel, A, max0);
 
 endmodule
