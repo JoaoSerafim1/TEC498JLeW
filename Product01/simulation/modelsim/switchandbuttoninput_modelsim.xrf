@@ -13,6 +13,7 @@ source_file = 1, E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v
 source_file = 1, E:/JLeW/TEC498JLeW/Product01/displayvalidator.v
 source_file = 1, E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v
 source_file = 1, E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v
+source_file = 1, E:/JLeW/TEC498JLeW/Product01/mux2to1.v
 source_file = 1, E:/JLeW/TEC498JLeW/Product01/db/switchandbuttoninput.cbx.xml
 design_name = mainmodule
 instance = comp, \CH7~I , CH7, mainmodule, 1

@@ -1,42 +1,42 @@
 |mainmodule
-CH0 => CH0.IN4
-CH1 => CH1.IN4
-CH2 => CH2.IN4
+CH0 => CH0.IN3
+CH1 => CH1.IN3
+CH2 => CH2.IN3
 CH3 => CH3.IN4
-CH4 => CH4.IN4
-CH5 => CH5.IN4
-CH6 => CH6.IN4
+CH4 => CH4.IN3
+CH5 => CH5.IN3
+CH6 => CH6.IN3
 CH7 => CH7.IN4
 BT0 => NBT0.IN4
 BT1 => NBT1.IN4
 BT2 => NBT2.IN4
 BT3 => NBT3.IN4
-LED0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LED1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LED2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LED3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LED4 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LED5 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LED6 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-COL0 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL1 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL2 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL3 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL4 <= permIE01.DB_MAX_OUTPUT_PORT_TYPE
-LIN0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN4 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN5 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-LIN6 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-SGDA <= sevensegmentdisplay:ssdisplay_0.sega
-SGDB <= sevensegmentdisplay:ssdisplay_0.segb
-SGDC <= sevensegmentdisplay:ssdisplay_0.segc
-SGDD <= sevensegmentdisplay:ssdisplay_0.segd
-SGDE <= sevensegmentdisplay:ssdisplay_0.sege
-SGDF <= sevensegmentdisplay:ssdisplay_0.segf
-SGDG <= sevensegmentdisplay:ssdisplay_0.segg
+LED0 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LED1 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LED2 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LED3 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LED4 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LED5 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LED6 << comb.DB_MAX_OUTPUT_PORT_TYPE
+COL0 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL1 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL2 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL3 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL4 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
+LIN0 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN1 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN2 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN3 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN4 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN5 << comb.DB_MAX_OUTPUT_PORT_TYPE
+LIN6 << comb.DB_MAX_OUTPUT_PORT_TYPE
+SGDA << sevensegmentdisplay:ssdisplay_0.sega
+SGDB << sevensegmentdisplay:ssdisplay_0.segb
+SGDC << sevensegmentdisplay:ssdisplay_0.segc
+SGDD << sevensegmentdisplay:ssdisplay_0.segd
+SGDE << sevensegmentdisplay:ssdisplay_0.sege
+SGDF << sevensegmentdisplay:ssdisplay_0.segf
+SGDG << sevensegmentdisplay:ssdisplay_0.segg
 
 
 |mainmodule|allpermission:allperm_IE01
@@ -180,40 +180,33 @@ B1 <= A1toB1.DB_MAX_OUTPUT_PORT_TYPE
 B2 <= A2toB2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mainmodule|sevendisplayselector:sevensel_0
-A => WideAnd0.IN0
-B => WideAnd0.IN1
-C => WideAnd0.IN2
-D => WideAnd1.IN0
-E => WideAnd1.IN1
-F => WideAnd1.IN2
-priorsel => max0condition.IN1
-displaysel <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|mainmodule|mux6to3:dpvalidatormux_0
-A => out00and0.IN0
-B => out01and0.IN0
-C => out02and0.IN0
-D => out00and1.IN0
-E => out01and1.IN0
-F => out02and1.IN0
-sel => out00and1.IN1
-sel => out01and1.IN1
-sel => out02and1.IN1
-sel => out00and0.IN1
-sel => out01and0.IN1
-sel => out02and0.IN1
-out0 <= finalout0.DB_MAX_OUTPUT_PORT_TYPE
-out1 <= finalout1.DB_MAX_OUTPUT_PORT_TYPE
-out2 <= finalout2.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |mainmodule|displayvalidator:dpval_0
 A => ~NO_FANOUT~
 B => ~NO_FANOUT~
 C => ~NO_FANOUT~
 validout <= <GND>
+
+
+|mainmodule|displayvalidator:dpval_1
+A => ~NO_FANOUT~
+B => ~NO_FANOUT~
+C => ~NO_FANOUT~
+validout <= <GND>
+
+
+|mainmodule|sevendisplayselector:sevensel_0
+A => displaysel.DATAIN
+B => ~NO_FANOUT~
+priorsel => ~NO_FANOUT~
+displaysel <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainmodule|mux2to1:dpvalidatormux_0
+A => out00and0.IN0
+B => out00and1.IN0
+sel => out00and1.IN1
+sel => out00and0.IN1
+out <= finalout0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainmodule|mux6to3:displaymux_0

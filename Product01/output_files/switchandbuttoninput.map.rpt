@@ -1,5 +1,5 @@
 Analysis & Synthesis report for switchandbuttoninput
-Sun Sep 03 00:07:13 2023
+Sun Sep 03 19:51:14 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Sep 03 00:07:13 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Sep 03 19:51:14 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; switchandbuttoninput                        ;
 ; Top-level Entity Name       ; mainmodule                                  ;
@@ -157,6 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ; displayvalidator.v               ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/displayvalidator.v       ;         ;
 ; ledinterfaceselector.v           ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v   ;         ;
 ; ledsequencedecoder.v             ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v     ;         ;
+; mux2to1.v                        ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/mux2to1.v                ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 
 
@@ -233,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 03 00:06:49 2023
+    Info: Processing started: Sun Sep 03 19:50:55 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -262,20 +263,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file ledinte
     Info (12023): Found entity 1: ledinterfaceselector File: E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ledsequencedecoder.v
     Info (12023): Found entity 1: ledsequencedecoder File: E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
+    Info (12023): Found entity 1: mux2to1 File: E:/JLeW/TEC498JLeW/Product01/mux2to1.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at sevendisplayselector.v(24): created implicit net for "C" File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 24
 Info (12127): Elaborating entity "mainmodule" for the top level hierarchy
-Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 61
-Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 83
-Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 94
-Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 107
-Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 132
-Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 146
-Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 154
+Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 78
+Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 100
+Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 111
+Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 124
+Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 145
 Warning (10034): Output port "validout" at displayvalidator.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 12
-Warning (12158): Entity "displayvalidator" contains only dangling pins File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 154
-Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 183
-Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 197
-Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 219
-Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 253
+Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 161
+Warning (10030): Net "C" at sevendisplayselector.v(24) has no driver or initial value, using a default initial value '0' File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 24
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 169
+Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:displaymux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 183
+Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 198
+Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 212
+Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 234
+Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 268
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SGDA" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
     Warning (13410): Pin "SGDB" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
@@ -288,10 +293,10 @@ Info (21057): Implemented 90 device resources after synthesis - the final resour
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 26 output pins
     Info (21061): Implemented 52 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Sun Sep 03 00:07:14 2023
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:38
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Sun Sep 03 19:51:14 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:34
 
 
