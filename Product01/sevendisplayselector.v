@@ -21,7 +21,7 @@ displaysel);
 	
 
 //Negacao de algumas entradas
-not (NB, C);
+not (NB, B);
 not (Npriorsel, priorsel);
 
 //Parte da fatoracao dos dois mintermos (!priorsel + !B)
