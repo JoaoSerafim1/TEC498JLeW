@@ -18,11 +18,11 @@ LED3 << comb.DB_MAX_OUTPUT_PORT_TYPE
 LED4 << comb.DB_MAX_OUTPUT_PORT_TYPE
 LED5 << comb.DB_MAX_OUTPUT_PORT_TYPE
 LED6 << comb.DB_MAX_OUTPUT_PORT_TYPE
-COL0 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL1 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL2 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL3 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
-COL4 << permIE01.DB_MAX_OUTPUT_PORT_TYPE
+COL0 << noneOnWire.DB_MAX_OUTPUT_PORT_TYPE
+COL1 << noneOnWire.DB_MAX_OUTPUT_PORT_TYPE
+COL2 << noneOnWire.DB_MAX_OUTPUT_PORT_TYPE
+COL3 << noneOnWire.DB_MAX_OUTPUT_PORT_TYPE
+COL4 << noneOnWire.DB_MAX_OUTPUT_PORT_TYPE
 LIN0 << comb.DB_MAX_OUTPUT_PORT_TYPE
 LIN1 << comb.DB_MAX_OUTPUT_PORT_TYPE
 LIN2 << comb.DB_MAX_OUTPUT_PORT_TYPE
@@ -181,24 +181,24 @@ B2 <= A2toB2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainmodule|displayvalidator:dpval_0
-A => ~NO_FANOUT~
-B => ~NO_FANOUT~
-C => ~NO_FANOUT~
-validout <= <GND>
+A => validoutand.IN0
+B => validoutand.IN1
+C => validoutand.IN2
+validout <= validoutand.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainmodule|displayvalidator:dpval_1
-A => ~NO_FANOUT~
-B => ~NO_FANOUT~
-C => ~NO_FANOUT~
-validout <= <GND>
+A => validoutand.IN0
+B => validoutand.IN1
+C => validoutand.IN2
+validout <= validoutand.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainmodule|sevendisplayselector:sevensel_0
-A => displaysel.DATAIN
-B => ~NO_FANOUT~
-priorsel => ~NO_FANOUT~
-displaysel <= A.DB_MAX_OUTPUT_PORT_TYPE
+A => comb.IN1
+B => max0condition.IN0
+priorsel => max0condition.IN1
+displaysel <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainmodule|mux2to1:dpvalidatormux_0

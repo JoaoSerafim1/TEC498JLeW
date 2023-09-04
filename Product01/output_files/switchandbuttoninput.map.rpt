@@ -1,5 +1,5 @@
 Analysis & Synthesis report for switchandbuttoninput
-Sun Sep 03 19:51:14 2023
+Mon Sep 04 20:39:50 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,12 +41,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Sep 03 19:51:14 2023       ;
+; Analysis & Synthesis Status ; Successful - Mon Sep 04 20:39:50 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; switchandbuttoninput                        ;
 ; Top-level Entity Name       ; mainmodule                                  ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 52                                          ;
+; Total logic elements        ; 63                                          ;
 ; Total pins                  ; 38                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -161,38 +161,38 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 52    ;
-;     -- Combinational with no register       ; 52    ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 31    ;
-;     -- 3 input functions                    ; 20    ;
-;     -- 2 input functions                    ; 1     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 52    ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 38    ;
-; Maximum fan-out node                        ; CH0   ;
-; Maximum fan-out                             ; 10    ;
-; Total fan-out                               ; 205   ;
-; Average fan-out                             ; 2.28  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                             ;
++---------------------------------------------+-------------------------------------------+
+; Resource                                    ; Usage                                     ;
++---------------------------------------------+-------------------------------------------+
+; Total logic elements                        ; 63                                        ;
+;     -- Combinational with no register       ; 63                                        ;
+;     -- Register only                        ; 0                                         ;
+;     -- Combinational with a register        ; 0                                         ;
+;                                             ;                                           ;
+; Logic element usage by number of LUT inputs ;                                           ;
+;     -- 4 input functions                    ; 43                                        ;
+;     -- 3 input functions                    ; 18                                        ;
+;     -- 2 input functions                    ; 2                                         ;
+;     -- 1 input functions                    ; 0                                         ;
+;     -- 0 input functions                    ; 0                                         ;
+;                                             ;                                           ;
+; Logic elements by mode                      ;                                           ;
+;     -- normal mode                          ; 63                                        ;
+;     -- arithmetic mode                      ; 0                                         ;
+;     -- qfbk mode                            ; 0                                         ;
+;     -- register cascade mode                ; 0                                         ;
+;     -- synchronous clear/load mode          ; 0                                         ;
+;     -- asynchronous clear/load mode         ; 0                                         ;
+;                                             ;                                           ;
+; Total registers                             ; 0                                         ;
+; I/O pins                                    ; 38                                        ;
+; Maximum fan-out node                        ; ledinterfaceselector:ledifsel_IE01|comb~0 ;
+; Maximum fan-out                             ; 14                                        ;
+; Total fan-out                               ; 256                                       ;
+; Average fan-out                             ; 2.53                                      ;
++---------------------------------------------+-------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -200,15 +200,21 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                            ; Entity Name            ; Library Name ;
 +-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
-; |mainmodule                             ; 52 (14)     ; 0            ; 0          ; 38   ; 0            ; 52 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule                                    ; mainmodule             ; work         ;
-;    |allpermission:allperm_IE01|         ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|allpermission:allperm_IE01         ; allpermission          ; work         ;
-;    |entryinterfaceselector:eisel_0|     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|entryinterfaceselector:eisel_0     ; entryinterfaceselector ; work         ;
+; |mainmodule                             ; 63 (15)     ; 0            ; 0          ; 38   ; 0            ; 63 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule                                    ; mainmodule             ; work         ;
+;    |allpermission:allperm_IE01|         ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|allpermission:allperm_IE01         ; allpermission          ; work         ;
+;    |allpermission:allperm_IE02|         ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|allpermission:allperm_IE02         ; allpermission          ; work         ;
+;    |entryinterfaceselector:eisel_0|     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|entryinterfaceselector:eisel_0     ; entryinterfaceselector ; work         ;
 ;    |ledinterfaceselector:ledifsel_IE01| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledinterfaceselector:ledifsel_IE01 ; ledinterfaceselector   ; work         ;
 ;    |ledinterfaceselector:ledifsel_IE02| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledinterfaceselector:ledifsel_IE02 ; ledinterfaceselector   ; work         ;
-;    |mux7to14:mux7to14_IE01|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE01             ; mux7to14               ; work         ;
-;    |mux7to14:mux7to14_IE02|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE02             ; mux7to14               ; work         ;
-;    |unidirbustrans3b:gatedbus_IE01|     ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE01     ; unidirbustrans3b       ; work         ;
-;    |unidirbustrans3b:gatedbus_IE02|     ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE02     ; unidirbustrans3b       ; work         ;
+;    |ledsequencedecoder:ledseqdec_IE01|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledsequencedecoder:ledseqdec_IE01  ; ledsequencedecoder     ; work         ;
+;    |ledsequencedecoder:ledseqdec_IE02|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|ledsequencedecoder:ledseqdec_IE02  ; ledsequencedecoder     ; work         ;
+;    |mux6to3:displaymux_0|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux6to3:displaymux_0               ; mux6to3                ; work         ;
+;    |mux7to14:mux7to14_IE01|             ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE01             ; mux7to14               ; work         ;
+;    |mux7to14:mux7to14_IE02|             ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|mux7to14:mux7to14_IE02             ; mux7to14               ; work         ;
+;    |sevendisplayselector:sevensel_0|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|sevendisplayselector:sevensel_0    ; sevendisplayselector   ; work         ;
+;    |sevensegmentdisplay:ssdisplay_0|    ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|sevensegmentdisplay:ssdisplay_0    ; sevensegmentdisplay    ; work         ;
+;    |unidirbustrans3b:gatedbus_IE01|     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE01     ; unidirbustrans3b       ; work         ;
+;    |unidirbustrans3b:gatedbus_IE02|     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |mainmodule|unidirbustrans3b:gatedbus_IE02     ; unidirbustrans3b       ; work         ;
 +-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -234,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Sep 03 19:50:55 2023
+    Info: Processing started: Mon Sep 04 20:39:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -265,38 +271,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file ledsequ
     Info (12023): Found entity 1: ledsequencedecoder File: E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
     Info (12023): Found entity 1: mux2to1 File: E:/JLeW/TEC498JLeW/Product01/mux2to1.v Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at sevendisplayselector.v(24): created implicit net for "C" File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 24
 Info (12127): Elaborating entity "mainmodule" for the top level hierarchy
-Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 78
-Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 100
-Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 111
-Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 124
-Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 145
-Warning (10034): Output port "validout" at displayvalidator.v(12) has no driver File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 12
-Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 161
-Warning (10030): Net "C" at sevendisplayselector.v(24) has no driver or initial value, using a default initial value '0' File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 24
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 169
-Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:displaymux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 183
-Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 198
-Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 212
-Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 234
-Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 268
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SGDA" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-    Warning (13410): Pin "SGDB" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-    Warning (13410): Pin "SGDC" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-    Warning (13410): Pin "SGDD" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-    Warning (13410): Pin "SGDE" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-    Warning (13410): Pin "SGDF" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-    Warning (13410): Pin "SGDG" is stuck at VCC File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 16
-Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
+Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 80
+Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 102
+Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 113
+Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 126
+Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 147
+Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 163
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 171
+Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:displaymux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 185
+Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 200
+Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 214
+Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 236
+Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 270
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 52 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Sun Sep 03 19:51:14 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:34
+    Info (21061): Implemented 63 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4701 megabytes
+    Info: Processing ended: Mon Sep 04 20:39:51 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -1,5 +1,5 @@
 Flow report for switchandbuttoninput
-Sun Sep 03 19:51:34 2023
+Mon Sep 04 20:46:14 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,21 +38,21 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------+
-; Flow Summary                                                        ;
-+-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sun Sep 03 19:51:34 2023       ;
-; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name         ; switchandbuttoninput                        ;
-; Top-level Entity Name ; mainmodule                                  ;
-; Family                ; MAX II                                      ;
-; Device                ; EPM240T100C5                                ;
-; Timing Models         ; Final                                       ;
-; Total logic elements  ; 52 / 240 ( 22 % )                           ;
-; Total pins            ; 38 / 80 ( 48 % )                            ;
-; Total virtual pins    ; 0                                           ;
-; UFM blocks            ; 0 / 1 ( 0 % )                               ;
-+-----------------------+---------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++-----------------------+------------------------------------------------------+
+; Flow Status           ; EDA Netlist Writer Failed - Mon Sep 04 20:46:14 2023 ;
+; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition          ;
+; Revision Name         ; switchandbuttoninput                                 ;
+; Top-level Entity Name ; mainmodule                                           ;
+; Family                ; MAX II                                               ;
+; Device                ; EPM240T100C5                                         ;
+; Timing Models         ; Final                                                ;
+; Total logic elements  ; 63 / 240 ( 26 % )                                    ;
+; Total pins            ; 38 / 80 ( 48 % )                                     ;
+; Total virtual pins    ; 0                                                    ;
+; UFM blocks            ; 0 / 1 ( 0 % )                                        ;
++-----------------------+------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 09/03/2023 19:50:57  ;
+; Start date & time ; 09/04/2023 20:39:38  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; switchandbuttoninput ;
 +-------------------+----------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+-------------------------------+----------------------+-------------+----------------+
 ; Assignment Name                       ; Value                         ; Default Value        ; Entity Name ; Section Id     ;
 +---------------------------------------+-------------------------------+----------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 2543261221386.169378145607876 ; --                   ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 2543261221386.169387077702004 ; --                   ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                   ; --                   ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)     ; <None>               ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                            ; --                   ; --          ; --             ;
@@ -88,12 +88,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4700 MB             ; 00:00:34                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 5518 MB             ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4701 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 5519 MB             ; 00:00:02                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4662 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4676 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4617 MB             ; 00:00:01                           ;
-; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:41                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4676 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4617 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4607 MB             ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,6 +108,7 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HERR2CV  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -118,6 +120,7 @@ quartus_fit --read_settings_files=off --write_settings_files=off Product01 -c sw
 quartus_asm --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
 quartus_sta Product01 -c switchandbuttoninput
 quartus_eda --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Product01 -c switchandbuttoninput --vector_source=E:/JLeW/Product01/Waveform.vwf --testbench_file=E:/JLeW/Product01/simulation/qsim/Waveform.vwf.vt
 
 
 
