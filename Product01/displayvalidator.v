@@ -20,6 +20,6 @@ not (NA, A);
 not (NC, C);
 
 //Verifica se esta executando a funcao 2
-and validoutand (NA, B, NC);
+and validoutand (validout, NA, B, NC);
 
 endmodule
