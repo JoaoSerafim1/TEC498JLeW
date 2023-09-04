@@ -1,6 +1,7 @@
 //Modulo principal (entidade de maior nivel); Instancia todos os demais modulos e os liga
 module mainmodule (CH0, CH1, CH2, CH3, CH4, CH5, CH6, CH7,
 BT0, BT1, BT2, BT3, LED0, LED1, LED2, LED3, LED4, LED5, LED6,
+//LED7, LED8, LED9,
 COL0, COL1, COL2, COL3, COL4, LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
 SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entrada e saida (nao inclui fios)
 	
@@ -9,6 +10,7 @@ SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entra
 	
 	//Declara elementos de saida (LED Sequencial, Matrix de LED e Display de 7 Segmentos)
 	output LED0, LED1, LED2, LED3, LED4, LED5, LED6,
+	//LED7, LED8, LED9,
 
 	COL0, COL1, COL2, COL3, COL4,
 	LIN0, LIN1, LIN2, LIN3, LIN4, LIN5, LIN6,
@@ -54,8 +56,8 @@ SGDA, SGDB, SGDC, SGDD, SGDE, SGDF, SGDG); //Declara todos os elementos de entra
 	seqledwireIE01[6:0],
 	seqledwireIE02[6:0],
 	
-	//Fio para ligar as colunas da matriz de LED aos dois fios de permissao (permIE01, permIE02)
-	possiblelattoutput;
+	//Fio da verificacao de uma das saidas nao estar ligada
+	noneOnWire;
 
 //Negacao dos botoes
 not (NBT0, BT0);
@@ -302,12 +304,22 @@ nor (LIN4, lattledwireIE01[4], lattledwireIE02[4]);
 nor (LIN5, lattledwireIE01[5], lattledwireIE02[5]);
 nor (LIN6, lattledwireIE01[6], lattledwireIE02[6]);
 //Manter sempre as colunas ligadas caso exista algum usuario utilizando funcionalidade permitida
-or (possiblelattoutput, permIE01, permIE01);
-assign COL0 = possiblelattoutput;
-assign COL1 = possiblelattoutput;
-assign COL2 = possiblelattoutput;
-assign COL3 = possiblelattoutput;
-assign COL4 = possiblelattoutput;
+nor (noneOnWire, permIE01, permIE02);
+not (COL0, noneOnWire);
+not (COL1, noneOnWire);
+not (COL2, noneOnWire);
+not (COL3, noneOnWire);
+not (COL4, noneOnWire);
+//or (COL0, permIE01, permIE02);
+//or (COL1, permIE01, permIE02);
+//or (COL2, permIE01, permIE02);
+//or (COL3, permIE01, permIE02);
+//or (COL4, permIE01, permIE02);
+
+//Teste
+//or (LED7, displayvalwire0);
+//or (LED8, displayvalwire1);
+//or (LED9, mux2to1ToDisplay);
 
 //Condicoes de ligar unidades LED (IS02)
 or (LED0, seqledwireIE01[0], seqledwireIE02[0]);
