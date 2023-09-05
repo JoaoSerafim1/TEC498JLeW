@@ -138,7 +138,7 @@ unidirbustrans3b gatedbus_IE02 (
 		.B2 (featurebitIE02[2])
 );
 
-//Instancia do validador de usuario na IE01
+//Instancia do validador da funcionalidade 2 na IE01
 displayvalidator dpval_0 (
 		.A (featurebitIE01[0]),
 		.B (featurebitIE01[1]),
@@ -146,7 +146,7 @@ displayvalidator dpval_0 (
 		.validout (displayvalwire0)
 );
 
-//Instancia do validador de usuario na IE01
+//Instancia do validador da funcionalidade 2 na IE02
 displayvalidator dpval_1 (
 		.A (featurebitIE02[0]),
 		.B (featurebitIE02[1]),
