@@ -1,6 +1,6 @@
 EDA Netlist Writer report for switchandbuttoninput
-Fri Sep 08 07:58:06 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Tue Sep 12 15:41:57 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Sep 08 07:58:06 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Sep 12 15:41:57 2023 ;
 ; Revision Name             ; switchandbuttoninput                  ;
 ; Top-level Entity Name     ; mainmodule                            ;
 ; Family                    ; MAX II                                ;
@@ -67,14 +67,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Simulation Generated Files                                                  ;
-+-----------------------------------------------------------------------------+
-; Generated Files                                                             ;
-+-----------------------------------------------------------------------------+
-; E:/JLeW/TEC498JLeW/Product01/simulation/modelsim/switchandbuttoninput.vo    ;
-; E:/JLeW/TEC498JLeW/Product01/simulation/modelsim/switchandbuttoninput_v.sdo ;
-+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                     ;
++------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                ;
++------------------------------------------------------------------------------------------------+
+; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/simulation/modelsim/switchandbuttoninput.vo    ;
+; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/simulation/modelsim/switchandbuttoninput_v.sdo ;
++------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -82,15 +82,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 08 07:58:05 2023
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Sep 12 15:41:56 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204018): Generated files "switchandbuttoninput.vo" and "switchandbuttoninput_v.sdo" in directory "E:/JLeW/TEC498JLeW/Product01/simulation/modelsim/" for EDA simulation tool
+Info (204018): Generated files "switchandbuttoninput.vo" and "switchandbuttoninput_v.sdo" in directory "/media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4620 megabytes
-    Info: Processing ended: Fri Sep 08 07:58:07 2023
+    Info: Peak virtual memory: 577 megabytes
+    Info: Processing ended: Tue Sep 12 15:41:58 2023
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

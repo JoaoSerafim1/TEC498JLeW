@@ -1,6 +1,6 @@
 Analysis & Synthesis report for switchandbuttoninput
-Fri Sep 08 07:57:47 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Tue Sep 12 15:41:36 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -41,8 +41,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Sep 08 07:57:47 2023       ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status ; Successful - Tue Sep 12 15:41:36 2023       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; switchandbuttoninput                        ;
 ; Top-level Entity Name       ; mainmodule                                  ;
 ; Family                      ; MAX II                                      ;
@@ -140,25 +140,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-; mainmodule.v                     ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/mainmodule.v             ;         ;
-; allpermission.v                  ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/allpermission.v          ;         ;
-; mux6to3.v                        ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/mux6to3.v                ;         ;
-; mux7to14.v                       ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/mux7to14.v               ;         ;
-; sevensegmentdisplay.v            ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/sevensegmentdisplay.v    ;         ;
-; entryinterfaceselector.v         ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/entryinterfaceselector.v ;         ;
-; featureconflictchecker.v         ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/featureconflictchecker.v ;         ;
-; sevendisplayselector.v           ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v   ;         ;
-; unidirbustrans3b.v               ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v       ;         ;
-; displayvalidator.v               ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/displayvalidator.v       ;         ;
-; ledinterfaceselector.v           ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v   ;         ;
-; ledsequencedecoder.v             ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v     ;         ;
-; mux2to1.v                        ; yes             ; User Verilog HDL File  ; E:/JLeW/TEC498JLeW/Product01/mux2to1.v                ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; mainmodule.v                     ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v             ;         ;
+; allpermission.v                  ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/allpermission.v          ;         ;
+; mux6to3.v                        ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mux6to3.v                ;         ;
+; mux7to14.v                       ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mux7to14.v               ;         ;
+; sevensegmentdisplay.v            ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/sevensegmentdisplay.v    ;         ;
+; entryinterfaceselector.v         ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/entryinterfaceselector.v ;         ;
+; featureconflictchecker.v         ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/featureconflictchecker.v ;         ;
+; sevendisplayselector.v           ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/sevendisplayselector.v   ;         ;
+; unidirbustrans3b.v               ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v       ;         ;
+; displayvalidator.v               ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/displayvalidator.v       ;         ;
+; ledinterfaceselector.v           ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v   ;         ;
+; ledsequencedecoder.v             ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v     ;         ;
+; mux2to1.v                        ; yes             ; User Verilog HDL File  ; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mux2to1.v                ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -239,59 +239,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 08 07:57:32 2023
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Sep 12 15:41:27 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mainmodule.v
-    Info (12023): Found entity 1: mainmodule File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 2
+    Info (12023): Found entity 1: mainmodule File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file allpermission.v
-    Info (12023): Found entity 1: allpermission File: E:/JLeW/TEC498JLeW/Product01/allpermission.v Line: 2
+    Info (12023): Found entity 1: allpermission File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/allpermission.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux6to3.v
-    Info (12023): Found entity 1: mux6to3 File: E:/JLeW/TEC498JLeW/Product01/mux6to3.v Line: 2
+    Info (12023): Found entity 1: mux6to3 File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mux6to3.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux7to14.v
-    Info (12023): Found entity 1: mux7to14 File: E:/JLeW/TEC498JLeW/Product01/mux7to14.v Line: 2
+    Info (12023): Found entity 1: mux7to14 File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mux7to14.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentdisplay.v
-    Info (12023): Found entity 1: sevensegmentdisplay File: E:/JLeW/TEC498JLeW/Product01/sevensegmentdisplay.v Line: 2
+    Info (12023): Found entity 1: sevensegmentdisplay File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/sevensegmentdisplay.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file entryinterfaceselector.v
-    Info (12023): Found entity 1: entryinterfaceselector File: E:/JLeW/TEC498JLeW/Product01/entryinterfaceselector.v Line: 2
+    Info (12023): Found entity 1: entryinterfaceselector File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/entryinterfaceselector.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file featureconflictchecker.v
-    Info (12023): Found entity 1: featureconflictchecker File: E:/JLeW/TEC498JLeW/Product01/featureconflictchecker.v Line: 2
+    Info (12023): Found entity 1: featureconflictchecker File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/featureconflictchecker.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sevendisplayselector.v
-    Info (12023): Found entity 1: sevendisplayselector File: E:/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 2
-Warning (10238): Verilog Module Declaration warning at unidirbustrans3b.v(4): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "unidirbustrans3b" File: E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 4
+    Info (12023): Found entity 1: sevendisplayselector File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/sevendisplayselector.v Line: 2
+Warning (10238): Verilog Module Declaration warning at unidirbustrans3b.v(4): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "unidirbustrans3b" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file unidirbustrans3b.v
-    Info (12023): Found entity 1: unidirbustrans3b File: E:/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 2
+    Info (12023): Found entity 1: unidirbustrans3b File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/unidirbustrans3b.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file displayvalidator.v
-    Info (12023): Found entity 1: displayvalidator File: E:/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 2
+    Info (12023): Found entity 1: displayvalidator File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/displayvalidator.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ledinterfaceselector.v
-    Info (12023): Found entity 1: ledinterfaceselector File: E:/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v Line: 2
+    Info (12023): Found entity 1: ledinterfaceselector File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/ledinterfaceselector.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ledsequencedecoder.v
-    Info (12023): Found entity 1: ledsequencedecoder File: E:/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 2
+    Info (12023): Found entity 1: ledsequencedecoder File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/ledsequencedecoder.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: mux2to1 File: E:/JLeW/TEC498JLeW/Product01/mux2to1.v Line: 2
+    Info (12023): Found entity 1: mux2to1 File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mux2to1.v Line: 2
 Info (12127): Elaborating entity "mainmodule" for the top level hierarchy
-Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 80
-Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 102
-Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 113
-Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 126
-Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 147
-Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 163
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:dpvalidatormux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 171
-Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:displaymux_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 185
-Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 200
-Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 214
-Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 236
-Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: E:/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 270
+Info (12128): Elaborating entity "allpermission" for hierarchy "allpermission:allperm_IE01" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 80
+Info (12128): Elaborating entity "entryinterfaceselector" for hierarchy "entryinterfaceselector:eisel_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 102
+Info (12128): Elaborating entity "featureconflictchecker" for hierarchy "featureconflictchecker:ftcftchk_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 113
+Info (12128): Elaborating entity "unidirbustrans3b" for hierarchy "unidirbustrans3b:gatedbus_IE01" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 126
+Info (12128): Elaborating entity "displayvalidator" for hierarchy "displayvalidator:dpval_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 147
+Info (12128): Elaborating entity "sevendisplayselector" for hierarchy "sevendisplayselector:sevensel_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 163
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:dpvalidatormux_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 171
+Info (12128): Elaborating entity "mux6to3" for hierarchy "mux6to3:displaymux_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 185
+Info (12128): Elaborating entity "sevensegmentdisplay" for hierarchy "sevensegmentdisplay:ssdisplay_0" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 200
+Info (12128): Elaborating entity "ledsequencedecoder" for hierarchy "ledsequencedecoder:ledseqdec_IE01" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 214
+Info (12128): Elaborating entity "ledinterfaceselector" for hierarchy "ledinterfaceselector:ledifsel_IE01" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 236
+Info (12128): Elaborating entity "mux7to14" for hierarchy "mux7to14:mux7to14_IE01" File: /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/mainmodule.v Line: 270
 Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 26 output pins
     Info (21061): Implemented 63 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Fri Sep 08 07:57:48 2023
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Tue Sep 12 15:41:37 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:12
 
 

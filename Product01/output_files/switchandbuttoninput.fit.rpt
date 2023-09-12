@@ -1,6 +1,6 @@
 Fitter report for switchandbuttoninput
-Fri Sep 08 07:57:53 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Tue Sep 12 15:41:43 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -54,8 +54,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Fri Sep 08 07:57:53 2023       ;
-; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Fitter Status         ; Successful - Tue Sep 12 15:41:43 2023       ;
+; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; switchandbuttoninput                        ;
 ; Top-level Entity Name ; mainmodule                                  ;
 ; Family                ; MAX II                                      ;
@@ -147,7 +147,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pin.
+The pin-out file can be found in /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pin.
 
 
 +---------------------------------------------------------------------+
@@ -611,21 +611,21 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.fit.smsg
+Info (144001): Generated suppressed messages file /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 5518 megabytes
-    Info: Processing ended: Fri Sep 08 07:57:53 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 969 megabytes
+    Info: Processing ended: Tue Sep 12 15:41:44 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.fit.smsg.
+The suppressed messages can be found in /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.fit.smsg.
 
 

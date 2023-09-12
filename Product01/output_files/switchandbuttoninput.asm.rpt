@@ -1,6 +1,6 @@
 Assembler report for switchandbuttoninput
-Fri Sep 08 07:57:57 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Tue Sep 12 15:41:48 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pof
+  5. Assembler Device Options: switchandbuttoninput.pof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Sep 08 07:57:57 2023 ;
+; Assembler Status      ; Successful - Tue Sep 12 15:41:48 2023 ;
 ; Revision Name         ; switchandbuttoninput                  ;
 ; Top-level Entity Name ; mainmodule                            ;
 ; Family                ; MAX II                                ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------+
-; Assembler Generated Files                                          ;
-+--------------------------------------------------------------------+
-; File Name                                                          ;
-+--------------------------------------------------------------------+
-; E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pof ;
-+--------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                             ;
++---------------------------------------------------------------------------------------+
+; File Name                                                                             ;
++---------------------------------------------------------------------------------------+
+; /media/aluno/AL-6U-16/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pof ;
++---------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/JLeW/TEC498JLeW/Product01/output_files/switchandbuttoninput.pof ;
-+----------------+-----------------------------------------------------------------------------+
-; Option         ; Setting                                                                     ;
-+----------------+-----------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00185DCC                                                                  ;
-; Checksum       ; 0x00186144                                                                  ;
-+----------------+-----------------------------------------------------------------------------+
++----------------------------------------------------+
+; Assembler Device Options: switchandbuttoninput.pof ;
++----------------+-----------------------------------+
+; Option         ; Setting                           ;
++----------------+-----------------------------------+
+; JTAG usercode  ; 0x00185DCC                        ;
+; Checksum       ; 0x00186144                        ;
++----------------+-----------------------------------+
 
 
 +--------------------+
@@ -77,16 +77,16 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 08 07:57:55 2023
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Sep 12 15:41:46 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Product01 -c switchandbuttoninput
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4662 megabytes
-    Info: Processing ended: Fri Sep 08 07:57:57 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 326 megabytes
+    Info: Processing ended: Tue Sep 12 15:41:49 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
 
 
