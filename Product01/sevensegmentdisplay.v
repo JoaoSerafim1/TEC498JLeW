@@ -40,6 +40,7 @@ or (seggor, and0wire, and1wire);
 // (c) = !BC + AB!C
 // (e) = !ABC
 // (f) = AB!C
+// (g) = !AC + AB!C
 nand (sega, and0wire, dpval);
 nand (segb, segbor, dpval);
 nand (segc, segcor, dpval);
